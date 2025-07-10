@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CPDHGQBX4K');
+  </script>
+
+  <!-- Meta Information -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Riho Sepa IT projektid - Python, JavaScript, React, SQL ja DevOps õppimise tulemusel loodud rakendused ja tööriistad." />
+  <meta name="keywords" content="Riho Sepp projektid, Python, JavaScript, React, SQL, DevOps, IT õppimine, tarkvaraarendus" />
+  <meta name="author" content="Riho Sepp" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Riho Sepa IT Projektid" />
+  <meta property="og:description" content="Vaata minu IT õpingute käigus loodud projekte - Python, JavaScript, React ja palju muud." />
+  <meta property="og:image" content="./pildid/Riho.png" />
+  <meta property="og:url" content="https://rihosepp.com/projektid.html" />
+  <meta property="og:type" content="website" />
+
+  <title>Projektid - Riho Sepp</title>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/main.css" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Riho Sepa IT Projektid",
+    "description": "IT õpingute käigus loodud projektid ja rakendused",
+    "author": {
+      "@type": "Person",
+      "name": "Riho Sepp"
+    },
+    "about": ["Python", "JavaScript", "React", "SQL", "DevOps", "Web Development"]
+  }
+  </script>
+</head>
+<body class="dark-theme">
+
+  <!-- Skip to Main Content -->
+  <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Avaleht">Riho Sepp</a>
+  
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+        
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Avaleht</a></li>
+        <li role="none"><a href="projektid.html" class="active" role="menuitem">Projektid</a></li>
+        <li role="none"><a href="./minust/aboutme.html" role="menuitem">Minust</a></li>
+        <li role="none"><a href="./maitsetenurk/kokandus.html" role="menuitem">Maitsete nurk</a></li>
+        <li role="none"><a href="./meelelahutus/meelelahutus.html" role="menuitem">Meelelahutus</a></li>
+        <li role="none"><a href="meie.html" role="menuitem">Meie lugu</a></li>
+        <li role="none"><a href="raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
+        <li role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
+        
+        <!-- Mobile Language Selection -->
+        <li class="mobile-language-section" role="none">
+          <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
+            <button onclick="translatePage('et')" aria-label="Eesti keel">
+              <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('en')" aria-label="English">
+              <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('ru')" aria-label="Русский">
+              <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('fi')" aria-label="Suomi">
+              <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Desktop Language Selection -->
+  <div id="language-buttons" role="group" aria-label="Keelevalik">
+    <button onclick="translatePage('et')" aria-label="Eesti keel">
+      <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('en')" aria-label="English">
+      <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('ru')" aria-label="Русский">
+      <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('fi')" aria-label="Suomi">
+      <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <header class="hero-section" aria-label="Projektide tutvustus">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Minu <span class="highlight">Projektid</span></h1>
+            <p class="hero-description">
+              Siit leiad minu IT- ja tarkvaraarenduse õpingute käigus loodud projektid. 
+              Uuendused on pidevad ja iga projekt õpetab midagi uut!
+            </p>
+            
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Projekti</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Tehnoloogiat</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Õppetundi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projektid" class="section" aria-label="Projektide kategooriad">
+      <div class="section-header">
+        <h2 class="section-title">🛠 Projektid tehnoloogia järgi</h2>
+        <p class="section-subtitle">Vali tehnoloogia ja vaata, mida olen õppinud & ehitanud</p>
+      </div>
+
+      <!-- Technology Filter Buttons -->
+      <div class="button-group" role="tablist" aria-label="Projektide filtrid">
+        <button class="project-btn" role="tab" aria-selected="false" aria-controls="python" onclick="toggleSection('python')">
+          🐍 Python Õpe
+        </button>
+        <button class="project-btn" role="tab" aria-selected="false" aria-controls="js" onclick="toggleSection('js')">
+          📜 JavaScript
+        </button>
+        <button class="project-btn" role="tab" aria-selected="false" aria-controls="react" onclick="toggleSection('react')">
+          ⚛️ React
+        </button>
+        <button class="project-btn" role="tab" aria-selected="false" aria-controls="sql" onclick="toggleSection('sql')">
+          🗄️ SQL ja Andmebaasid
+        </button>
+        <button class="project-btn" role="tab" aria-selected="false" aria-controls="devops" onclick="toggleSection('devops')">
+          🚀 DevOps
+        </button>
+      </div>
+
+      <!-- Project Content Sections -->
+      <div id="python" class="project-content hidden" role="tabpanel" aria-labelledby="python-tab">
+        <h3>🐍 Python Õppimise Tulemusel</h3>
+        <p>Minu esimesed sammud programmeerimises. Python oli suurepäne keeleks alustamiseks!</p>
+        
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p>🎸 <strong>Band Name Generator:</strong> Esimene projekt! Õppisin kasutajalt sisendi küsimist ja stringidega mängimist. Lihtne, aga töötav programm, mis genereerib bändi nimed kasutaja sisendi põhjal.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">input()</span>
+              <span class="tech-tag">String manipulation</span>
+              <span class="tech-tag">Print statements</span>
+            </div>
+          </div>
+          
+          <div class="fact-card">
+            <p>🧮 <strong>Tip Calculator:</strong> Harjutasin float, int ja f-stringide kasutamist. Arvutab jootraha ja jagab arve inimeste vahel. Esimene kord, kui matemaatilised operatsioonid hakkasid mõtestatud tunduma.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Float operations</span>
+              <span class="tech-tag">F-strings</span>
+              <span class="tech-tag">Math calculations</span>
+            </div>
+          </div>
+          
+          <div class="fact-card">
+            <p>🏝️ <strong>Treasure Island:</strong> Esimene if-elif-else tekstimäng Pythonis. Keeruline loogika, aga õppisin, kuidas programm saab kasutaja valikute põhjal erinevaid teid minna.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Conditional logic</span>
+              <span class="tech-tag">If-elif-else</span>
+              <span class="tech-tag">Game logic</span>
+            </div>
+          </div>
+          
+          <div class="fact-card">
+            <p>🔒 <strong>Password Generator:</strong> Random moodul, tsüklid, loogika. Genereerib turvaliseid paroole erinevate parameetrite põhjal. Siin sain aru, kui võimas saab olla lihtne kood.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Random module</span>
+              <span class="tech-tag">For loops</span>
+              <span class="tech-tag">Lists</span>
+            </div>
+          </div>
+          
+          <div class="fact-card featured">
+            <p>🏆 <strong>Kuldvillak (Jeopardy):</strong> HTML, CSS, JS, DOM, localStorage – kõik ühes interaktiivses projektis. Minu esimene täielik veebirakendus, mis ühendab kõik õpitud tehnoloogiad!</p>
+            <div class="tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">DOM manipulation</span>
+              <span class="tech-tag">LocalStorage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="js" class="project-content hidden" role="tabpanel" aria-labelledby="js-tab">
+        <h3>📜 JavaScript Seiklused</h3>
+        <p>Pärast Pythoni tutvusin JavaScriptiga - keel, mis muudab veebilehed elavaks!</p>
+        
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p>⚙️ <strong>Tulevased projektid:</strong> JavaScript õppimine on pooleli. Plaan õppida DOM manipuleerimist, async/await funktsioone ja Node.js-i.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Planeerimisel</span>
+              <span class="tech-tag">DOM</span>
+              <span class="tech-tag">Async/Await</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="react" class="project-content hidden" role="tabpanel" aria-labelledby="react-tab">
+        <h3>⚛️ React Rännakud</h3>
+        <p>React on järgmine suur samm - komponendipõhine arendus ja kaasaegsed UI raamistikud.</p>
+        
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p>🔮 <strong>Tulevikuplaanid:</strong> React õppimine on minu 2025. aasta eesmärk. Soovin luua interaktiivseid komponente ja ühelehelisi rakendusi.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Plaanitud 2025</span>
+              <span class="tech-tag">Components</span>
+              <span class="tech-tag">Hooks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sql" class="project-content hidden" role="tabpanel" aria-labelledby="sql-tab">
+        <h3>🗄️ SQL ja Andmebaasid</h3>
+        <p>Andmebaaside maailm on põnev - kuidas hoiustada ja hallata suuri andmehulki efektiivselt.</p>
+        
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p>📊 <strong>Andmebaaside õpe:</strong> Plaan õppida SQL-i, andmebaasi disaini ja andmete analüüsi. PostgreSQL ja MySQL on minu nimekirjas.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Tulevikus</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="devops" class="project-content hidden" role="tabpanel" aria-labelledby="devops-tab">
+        <h3>🚀 DevOps ja Automaatika</h3>
+        <p>DevOps ühendab arenduse ja operatsioonid - automatiseerimine ja efektiivsus on võtmesõnad.</p>
+        
+        <div class="facts-grid">
+          <div class="fact-card">
+            <p>🔧 <strong>Windows Server kogemus:</strong> Sain sertifikaadi Windows Server 2019 Administration kursuselt. Õppisin serverite haldamist ja võrgu konfigureerimist.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Windows Server</span>
+              <span class="tech-tag">Active Directory</span>
+              <span class="tech-tag">Network Management</span>
+            </div>
+          </div>
+          
+          <div class="fact-card">
+            <p>☁️ <strong>Tulevikuplaanid:</strong> Docker, Git, CI/CD pipeline'id ja cloud teenused on minu õppimise nimekirjas järgmisteks kuudeks.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Journey Section -->
+    <section class="section" aria-label="Õppimise teekond">
+      <div class="section-header">
+        <h2 class="section-title">📚 Minu õppimise teekond</h2>
+        <p class="section-subtitle">Kuidas ma jõudsin siia ja mis on järgmised sammud</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2024 Detsember</div>
+          <div class="timeline-content">
+            <h3>🎓 FreeCodeCamp Sertifikaat</h3>
+            <p>Sain Responsive Web Design sertifikaadi. 300 tundi HTML5, CSS3 ja responsive disaini õppimist.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2024 Sügis</div>
+          <div class="timeline-content">
+            <h3>🐍 Python Algus</h3>
+            <p>Alustasin programmeerimist Pythoniga. Esimesed projektid ja algoritmilise mõtlemise õppimine.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2025 Juuni</div>
+          <div class="timeline-content">
+            <h3>🖥️ Windows Server</h3>
+            <p>Lõpetasin Windows Server 2019 Administration kursuse Udemy platvormil.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2025 Eesmärgid</div>
+          <div class="timeline-content">
+            <h3>🚀 Järgmised Sammud</h3>
+            <p>JavaScript süvendamine, React õppimine ja esimese täieliku web rakenduse loomine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" aria-label="Kontakt ja koostöö">
+      <div class="section-header">
+        <h2 class="section-title">🤝 Koostööks valmis!</h2>
+        <p class="section-subtitle">Kui sul on huvitav projekt või tahad rääkida tehnoloogiast</p>
+      </div>
+      
+      <div class="cta-group">
+        <a href="kontakt.html" class="btn-modern btn-primary">
+          📧 Võta ühendust
+        </a>
+        <a href="./maitsetenurk/kokandus.html" class="btn-modern btn-secondary">
+          🍳 Vaata ka kokandust
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">Riho Sepp</div>
+        <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/RihoSepp31" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profiil">
+          <img src="./ikoonid/github.svg" alt="GitHub ikoon" width="24" height="24" />
+        </a>
+        <a href="https://www.linkedin.com/in/rihosepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profiil">
+          <img src="./ikoonid/linkedin.svg" alt="LinkedIn ikoon" width="24" height="24" />
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud ❤️☕</p>
+    </div>
+  </footer>
+
+  <!-- Google Translate Element (Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- Tõlkeskriptid -->
+<script src="./js/translate.js" defer></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
+  <!-- Projects JavaScript -->
+  <script>
+    // Project sections toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🛠 Projektide leht laaditud!');
+      
+      // Initialize navigation
+      initializeNavigation();
+      
+      // Show first section by default
+      setTimeout(() => {
+        toggleSection('python');
+      }, 500);
+    });
+
+    // Navigation functionality (same as index.html)
+    function initializeNavigation() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const navLinksItems = document.querySelectorAll('.nav-links a');
+
+      if (!navToggle || !navLinks) return;
+
+      // Toggle mobile menu
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu on link click
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+
+      // Close menu on outside click
+      document.addEventListener('click', (event) => {
+        const isClickInside = navToggle.contains(event.target) || navLinks.contains(event.target);
+        if (!isClickInside && navLinks.classList.contains('active')) {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          navToggle.focus();
+        }
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        let ticking = false;
+        
+        function updateNavbar() {
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+          }
+        });
+      }
+    }
+
+    // Toggle project sections
+    function toggleSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.project-content').forEach(section => {
+        section.classList.add('hidden');
+      });
+      
+      // Remove active state from all buttons
+      document.querySelectorAll('.project-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      
+      // Show selected section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.remove('hidden');
+        
+        // Add active state to clicked button
+        const activeButton = document.querySelector(`[onclick="toggleSection('${sectionId}')"]`);
+        if (activeButton) {
+          activeButton.classList.add('active');
+          activeButton.setAttribute('aria-selected', 'true');
+        }
+        
+        // Smooth scroll to section
+        setTimeout(() => {
+          targetSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      }
+    }
+
+    // Error handling
+    window.addEventListener('error', function(event) {
+      console.error('JavaScript error:', event.error);
+    });
+
+    // Performance monitoring
+    window.addEventListener('load', function() {
+      const loadTime = performance.now();
+      console.log(`⚡ Projektide leht laaditud ${Math.round(loadTime)}ms-ga`);
+    });
+  </script>
+</body>
+</html>

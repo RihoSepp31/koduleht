@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPDHGQBX4K');
+</script>
+  <meta charset="UTF-8">
+  <title>Tip Calculator</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #ccffcc;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 255, 128, 0.15);
+      text-align: center;
+    }
+    input, button {
+      margin-top: 1rem;
+      padding: 0.6rem;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #66ffcc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🧮 Tip Calculator</h2>
+    <input type="number" id="bill" placeholder="Arve kogusumma €">
+    <input type="number" id="tip" placeholder="Jootraha % (nt 10)">
+    <input type="number" id="people" placeholder="Mitu inimest maksab?">
+    <button onclick="calculateTip()">Arvuta</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateTip() {
+      const bill = parseFloat(document.getElementById("bill").value);
+      const tip = parseFloat(document.getElementById("tip").value);
+      const people = parseInt(document.getElementById("people").value);
+      const result = document.getElementById("result");
+
+      if (bill && tip && people && people > 0) {
+        const tipAmount = bill * (tip / 100);
+        const total = bill + tipAmount;
+        const perPerson = total / people;
+        result.textContent = `Igaüks peaks maksma: €${perPerson.toFixed(2)}`;
+      } else {
+        result.textContent = "Palun täida kõik väljad korrektselt!";
+      }
+    }
+  </script>
+</body>
+</html>

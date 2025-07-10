@@ -1,0 +1,22 @@
+# Ignoreeri tundlikke faile
+api.php
+
+# Ignoreeri logifaile
+*.log
+
+# Ignoreeri video faile
+*.mp4
+
+# Ignoreeri pildikausta
+pildid/
+
+# Lisa soovi korral veel, nt Photoshop või IDE failid
+*.psd
+*.zip
+.DS_Store
+Thumbs.db
+
+# Node või Python projektide näited
+node_modules/
+venv/
+__pycache__/

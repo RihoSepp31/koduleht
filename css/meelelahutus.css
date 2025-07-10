@@ -1,0 +1,434 @@
+/* ===================================
+   ENTERTAINMENT.CSS
+   Meelelahutuse lehe stiilid
+   =================================== */
+
+/* Import base styles if needed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables for entertainment page */
+:root {
+  --entertainment-gradient-1: linear-gradient(135deg, #8b5cf6 0%, #00ff88 100%);
+  --entertainment-gradient-2: linear-gradient(135deg, #00ff88 0%, #0070f3 100%);
+  --entertainment-gradient-3: linear-gradient(135deg, #0070f3 0%, #8b5cf6 100%);
+  --card-bg: rgba(30, 30, 30, 0.6);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Override body for entertainment page */
+body {
+  background: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Entertainment specific hero */
+.entertainment-hero {
+  min-height: 50vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 8rem 2rem 3rem !important;
+  position: relative !important;
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(0, 255, 136, 0.05) 50%,
+    rgba(0, 112, 243, 0.1) 100%) !important;
+  overflow: hidden !important;
+}
+
+/* Animated particles background */
+.entertainment-hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 112, 243, 0.3) 0%, transparent 50%);
+  opacity: 0.1;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-20px, -30px) rotate(120deg); }
+  66% { transform: translate(20px, 20px) rotate(240deg); }
+}
+
+.entertainment-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  font-weight: 900 !important;
+  margin-bottom: 1rem !important;
+  background: linear-gradient(135deg, #8b5cf6 0%, #00ff88 50%, #0070f3 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  animation: glow 3s ease-in-out infinite !important;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 10px rgba(139, 92, 246, 0.5)); }
+  50% { filter: brightness(1.2) drop-shadow(0 0 20px rgba(0, 255, 136, 0.8)); }
+}
+
+.entertainment-hero p {
+  font-size: 1.2rem !important;
+  color: #b0b0b0 !important;
+  max-width: 700px !important;
+  line-height: 1.6 !important;
+  margin: 0 auto !important;
+  opacity: 0.9 !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Entertainment section styling */
+.entertainment-section {
+  padding: 4rem 2rem !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 2rem !important;
+  position: relative !important;
+}
+
+/* Entertainment cards - KASTID */
+.entertainment-card {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 20px !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  min-height: 250px !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+/* Gradient top border */
+.entertainment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8b5cf6, #00ff88, #0070f3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.entertainment-card:hover::before {
+  opacity: 1;
+}
+
+/* Card hover effect */
+.entertainment-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(139, 92, 246, 0.2) !important;
+  background: rgba(40, 40, 40, 0.8) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Card number/icon */
+.entertainment-card::after {
+  content: attr(data-number);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(139, 92, 246, 0.1);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Card content styling */
+.entertainment-card h3 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 0.5rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Emoji styling */
+.entertainment-card h3::before {
+  content: '';
+  font-size: 2rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.entertainment-card:nth-child(1) h3::before { content: '🎸'; }
+.entertainment-card:nth-child(2) h3::before { content: '🧮'; }
+.entertainment-card:nth-child(3) h3::before { content: '🏝️'; }
+.entertainment-card:nth-child(4) h3::before { content: '🔒'; }
+.entertainment-card:nth-child(5) h3::before { content: '🧠'; }
+
+/* Set card numbers */
+.entertainment-card:nth-child(1) { --card-number: '01'; }
+.entertainment-card:nth-child(2) { --card-number: '02'; }
+.entertainment-card:nth-child(3) { --card-number: '03'; }
+.entertainment-card:nth-child(4) { --card-number: '04'; }
+.entertainment-card:nth-child(5) { --card-number: '05'; }
+
+.entertainment-card:nth-child(1)::after { content: var(--card-number); }
+.entertainment-card:nth-child(2)::after { content: var(--card-number); }
+.entertainment-card:nth-child(3)::after { content: var(--card-number); }
+.entertainment-card:nth-child(4)::after { content: var(--card-number); }
+.entertainment-card:nth-child(5)::after { content: var(--card-number); }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+.entertainment-card p {
+  color: #a0a0a0 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  flex-grow: 1 !important;
+  margin: 0 0 1rem 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Try button - NUPUD */
+.try-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.8rem 2rem !important;
+  background: linear-gradient(135deg, #8b5cf6, #00ff88) !important;
+  color: #0a0a0a !important;
+  text-decoration: none !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3) !important;
+  align-self: flex-start !important;
+  white-space: nowrap !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-top: auto !important;
+}
+
+/* Button icon */
+.try-button::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+.try-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    0 6px 20px rgba(139, 92, 246, 0.4),
+    0 0 30px rgba(0, 255, 136, 0.3) !important;
+  background: linear-gradient(135deg, #00ff88, #0070f3) !important;
+}
+
+.try-button:hover::after {
+  transform: translateX(3px);
+}
+
+/* Button click effect */
+.try-button:active {
+  transform: scale(0.98) !important;
+}
+
+/* Card color variations */
+.entertainment-card:nth-child(1) {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    var(--card-bg) 100%) !important;
+}
+
+.entertainment-card:nth-child(2) {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 136, 0.1) 0%, 
+    var(--card-bg) 100%) !important;
+}
+
+.entertainment-card:nth-child(3) {
+  background: linear-gradient(135deg, 
+    rgba(0, 112, 243, 0.1) 0%, 
+    var(--card-bg) 100%) !important;
+}
+
+.entertainment-card:nth-child(4) {
+  background: linear-gradient(135deg, 
+    rgba(255, 152, 0, 0.1) 0%, 
+    var(--card-bg) 100%) !important;
+}
+
+.entertainment-card:nth-child(5) {
+  background: linear-gradient(135deg, 
+    rgba(244, 67, 54, 0.1) 0%, 
+    var(--card-bg) 100%) !important;
+}
+
+/* Category tags */
+.entertainment-card[data-category]::before {
+  content: attr(data-category);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #8b5cf6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .entertainment-hero {
+    padding: 6rem 1rem 2rem !important;
+    min-height: 40vh !important;
+  }
+
+  .entertainment-hero h1 {
+    font-size: 2.5rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .entertainment-hero p {
+    font-size: 1rem !important;
+  }
+
+  .entertainment-section {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 2rem 1rem !important;
+  }
+
+  .entertainment-card {
+    min-height: 220px !important;
+    padding: 1.5rem !important;
+  }
+
+  .entertainment-card h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .entertainment-card::after {
+    font-size: 2rem;
+    opacity: 0.1;
+  }
+
+  .try-button {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .entertainment-hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .entertainment-card {
+    padding: 1.2rem !important;
+  }
+}
+
+/* Page load animations */
+.entertainment-card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.entertainment-card:nth-child(1) { animation-delay: 0.1s; }
+.entertainment-card:nth-child(2) { animation-delay: 0.2s; }
+.entertainment-card:nth-child(3) { animation-delay: 0.3s; }
+.entertainment-card:nth-child(4) { animation-delay: 0.4s; }
+.entertainment-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Extra visual enhancements */
+.entertainment-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Loading state for buttons */
+.try-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.try-button.loading::after {
+  content: '⟳';
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.entertainment-card.success {
+  border-color: #00ff88 !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+}
+
+/* Footer adjustments */
+.footer {
+  margin-top: 4rem !important;
+  background: rgba(20, 20, 20, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}

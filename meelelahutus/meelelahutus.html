@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPDHGQBX4K');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riho Sepa meelelahutusnurk - lõbusad mini-rakendused ja mängud">
+    <title>Meelelahutus – Riho Sepp</title>
+    
+    <!-- TÄHTIS: CSS failide õige järjekord! -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/meelelahutus.css">
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Riho Sepp</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Avaleht</a></li>
+                <li><a href="../projektid.html">Projektid</a></li>
+                <li><a href="../minust/aboutme.html">Minust</a></li>
+                <li><a href="../maitsetenurk/kokandus.html">Maitsete nurk</a></li>
+                <li><a href="meelelahutus.html" class="active">Meelelahutus</a></li>
+                <li><a href="../meie.html">Meie lugu</a></li>
+                <li><a href="../raagi_kaasa.html">Räägi kaasa</a></li>
+                <li><a href="../kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Keelevalik -->
+    <div id="language-buttons">
+        <button onclick="translatePage('et')" aria-label="Eesti keel">
+            <img src="../lipud/ee.svg" alt="Eesti">
+        </button>
+        <button onclick="translatePage('en')" aria-label="English">
+            <img src="../lipud/gb.svg" alt="Inglise">
+        </button>
+        <button onclick="translatePage('ru')" aria-label="Русский">
+            <img src="../lipud/ru.svg" alt="Vene">
+        </button>
+        <button onclick="translatePage('fi')" aria-label="Suomi">
+            <img src="../lipud/fi.svg" alt="Soome">
+        </button>
+    </div>
+
+    <header class="entertainment-hero">
+        <h1>Meelelahutusnurk</h1>
+        <p>Siin saad ise katsetada lõbusaid mini-rakendusi, mis on loodud Python-projektide põhjal!</p>
+    </header>
+
+    <main>
+        <section class="entertainment-section">
+            
+            <div class="entertainment-card">
+                <h3>Proovi ise: Band Name Generator</h3>
+                <p>Loo oma bändi nimi paari klikiga.</p>
+                <a href="band_name_demo.html" class="try-button">Proovi kohe</a>
+            </div>
+
+            <div class="entertainment-card">
+                <h3>Proovi ise: Tip Calculator</h3>
+                <p>Arvuta, kui palju igaüks maksma peab.</p>
+                <a href="tip_calculator.html" class="try-button">Proovi kohe</a>
+            </div>
+
+            <div class="entertainment-card">
+                <h3>Proovi ise: Treasure Island</h3>
+                <p>Saa kätte aare.</p>
+                <a href="treasure_island.html" class="try-button">Proovi kohe</a>
+            </div>
+
+            <div class="entertainment-card">
+                <h3>Proovi ise: Password Generate</h3>
+                <p>Genereeri endale tugev parool.</p>
+                <a href="password_generator.html" class="try-button">Proovi kohe</a>
+            </div>
+
+            <div class="entertainment-card">
+                <h3>Mängi: Kuldvillak ehk Jeopardy</h3>
+                <p>Tule mängi koos sõpradega või tee meeskonnad ja mängige meeskonnaga</p>
+                <a href="kuldvillak.html" class="try-button">Proovi kohe</a>
+            </div>
+
+            <div class="entertainment-card">
+                <h3>💰 Isiklik Rahaplaan</h3>
+                <p>Desktop rakendus sinu rahaasjade haldamiseks. 
+                Jälgi oma laene, kulusid, sissetulekuid ja eelarvet. Andmed salvestatakse sinu arvutisse, privaatne ja turvaline
+                💡 „Kui Windows küsib, vajuta More info → Run anyway, see on täiesti turvaline, sest see on minu enda tehtud.“.</p>
+                <a href="../alla_laaditavad_failid/Rahaplaan Setup 1.0.0.exe" class="try-button">💾 Laadi alla</a>
+                </div>
+
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">Riho Sepp</div>
+                <p>&copy; 2025 Riho Sepp</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Translate element (peidetud) -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Skriptid -->
+    <script src="../translate.js"></script>
+
+</body>
+</html>

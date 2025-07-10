@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPDHGQBX4K');
+    </script>
+    
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mina olen Riho Sepp – IT spetsialist, tarkvaraarenduse huviline ja loov mõtleja. Tutvu minu taustaga ja teekonnaga kokandusest IT-ni.">
+    <meta name="keywords" content="Riho Sepp, IT spetsialist, kokk, programmeerimine, Windows Server, Python, JavaScript, Oulu">
+    <meta name="author" content="Riho Sepp">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Minust - Riho Sepp">
+    <meta property="og:description" content="Tutvu minu taustaga - teekond kokandusest IT-ni ja tagasi. Sihikindel, järjepidev ja fokuseeritud tegutseja.">
+    <meta property="og:image" content="../pildid/Riho.png">
+    <meta property="og:url" content="https://rihosepp.com/minust/aboutme.html">
+    <meta property="og:type" content="profile">
+    
+    <title>Minust – Riho Sepp</title>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Riho Sepp",
+      "jobTitle": "IT Specialist",
+      "description": "IT spetsialist ja endine kokk, kes ühendab tehnoloogia ja loovuse",
+      "url": "https://rihosepp.com",
+      "image": "https://rihosepp.com/pildid/Riho.png",
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "FreeCodeCamp"
+        }
+      ],
+      "knowsAbout": ["Python", "JavaScript", "Windows Server", "Web Development", "Cooking"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oulu",
+        "addressCountry": "Finland"
+      }
+    }
+    </script>
+</head>
+<body class="dark-theme">
+
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
+        <div class="nav-container">
+            <a class="logo" href="../index.html" aria-label="Avaleht">Riho Sepp</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">Avaleht</a></li>
+                <li role="none"><a href="../projektid.html" role="menuitem">Projektid</a></li>
+                <li role="none"><a href="../minust/aboutme.html" class="active" role="menuitem">Minust</a></li>
+                <li role="none"><a href="../maitsetenurk/kokandus.html" role="menuitem">Maitsete nurk</a></li>
+                <li role="none"><a href="../meelelahutus/meelelahutus.html" role="menuitem">Meelelahutus</a></li>
+                <li role="none"><a href="../meie.html" role="menuitem">Meie lugu</a></li>
+                <li role="none"><a href="../raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
+                <li role="none"><a href="../kontakt.html" role="menuitem">Kontakt</a></li>
+                
+                <!-- Mobile Language Selection -->
+                <li class="mobile-language-section" role="none">
+                    <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
+                        <button onclick="translatePage('et')" aria-label="Eesti keel">
+                            <img src="../lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+                        </button>
+                        <button onclick="translatePage('en')" aria-label="English">
+                            <img src="../lipud/gb.svg" alt="UK flag" width="24" height="18" />
+                        </button>
+                        <button onclick="translatePage('ru')" aria-label="Русский">
+                            <img src="../lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+                        </button>
+                        <button onclick="translatePage('fi')" aria-label="Suomi">
+                            <img src="../lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Desktop Language Selection -->
+    <div id="language-buttons" role="group" aria-label="Keelevalik">
+        <button onclick="translatePage('et')" aria-label="Eesti keel">
+            <img src="../lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+        </button>
+        <button onclick="translatePage('en')" aria-label="English">
+            <img src="../lipud/gb.svg" alt="UK flag" width="24" height="18" />
+        </button>
+        <button onclick="translatePage('ru')" aria-label="Русский">
+            <img src="../lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+        </button>
+        <button onclick="translatePage('fi')" aria-label="Suomi">
+            <img src="../lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+        </button>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-button" aria-label="Tagasi avalehele">
+        ← Tagasi
+    </a>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-label="Tutvustus">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Mina olen <span class="highlight">Riho Sepp</span></h1>
+                        <p class="hero-description">
+                            Sihikindel, järjepidev ja fokuseeritud tegutseja. Mind paeluvad programmeerimine, 
+                            kokandus ja digimaailm – püüan pidevalt oma teadmisi ja oskusi laiendada.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Aastat IT kogemust</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projekti</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Aastat kokanduses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-container">
+                            <div class="profile-ring"></div>
+                            <img src="../pildid/Riho.png" alt="Riho Sepp profiilipilt" class="profile-photo" loading="eager" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Story Section -->
+        <section class="section" aria-label="Minu lugu">
+            <div class="section-header">
+                <h2 class="section-title">📖 Minu lugu</h2>
+                <p class="section-subtitle">Teekond kokandusest IT-ni ja tagasi</p>
+            </div>
+            
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <p>🍳 <strong>Koka taust:</strong> Alustasin oma karjääri köögis, kus õppisin täpsust, loovust ja meeskonnatööd. Need oskused on mind aidanud ka IT-maailmas, kus olen leidnud oma tõelise kirge.</p>
+                </div>
+                <div class="fact-card">
+                    <p>💻 <strong>IT kirg:</strong> Tehnoloogia on alati mind huvitanud, aga tõeline "kliki" hetk tuli Windows Server 2019 kursusega. Sealt algas minu õppimise teekond programmeerimises.</p>
+                </div>
+                <div class="fact-card">
+                    <p>🌱 <strong>Pidev õppija:</strong> Iga päev õpin midagi uut. Python oli minu esimene armastus programmeerimises, nüüd avardun JavaScript ja React suunas.</p>
+                </div>
+                <div class="fact-card">
+                    <p>🎯 <strong>Eesmärk:</strong> Tahan ühendada oma kaht kirge - luua tehnoloogilisi lahendusi, mis aitavad inimestel paremini elada, eriti toidu ja tervisega seotud valdkondades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" aria-label="Oskused">
+            <div class="section-header">
+                <h2 class="section-title">🛠 Oskused ja teadmised</h2>
+                <p class="section-subtitle">Mida olen õppinud ja milles arenemine jätkub</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Programmeerimine</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <strong>Python</strong> - Esimene programmeerimiskeel, millega tegelen
+                        </div>
+                        <div class="skill-item">
+                            <strong>JavaScript</strong> - Veebirakenduste loomine ja DOM manipuleerimine
+                        </div>
+                        <div class="skill-item">
+                            <strong>HTML5 & CSS3</strong> - Responsive web design ja moodne kujundus
+                        </div>
+                        <div class="skill-item">
+                            <strong>React</strong> - Õppimisfaasis, 2025 eesmärk
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🖥️ Süsteemide haldamine</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <strong>Windows Server 2019</strong> - Sertifitseeritud administraator
+                        </div>
+                        <div class="skill-item">
+                            <strong>Active Directory</strong> - Kasutajate ja õiguste haldamine
+                        </div>
+                        <div class="skill-item">
+                            <strong>Võrgu seadistamine</strong> - Põhilised networking oskused
+                        </div>
+                        <div class="skill-item">
+                            <strong>Git</strong> - Versioonihaldus ja koostöö
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🍳 Kokandus ja loovus</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <strong>Professionaalne kokandus</strong> - 10+ aastat kogemust
+                        </div>
+                        <div class="skill-item">
+                            <strong>Menüüde planeerimine</strong> - Retseptide loomine ja optimeerimine
+                        </div>
+                        <div class="skill-item">
+                            <strong>Meeskonnatöö</strong> - Köögibrigaadi juhtimine
+                        </div>
+                        <div class="skill-item">
+                            <strong>Loovus ja innovatsioon</strong> - Uute lahenduste leidmine
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔧 Tööriistad ja tehnoloogiad</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <strong>VS Code</strong> - Peamine arenduskeskkond
+                        </div>
+                        <div class="skill-item">
+                            <strong>Chrome DevTools</strong> - Debugging ja testimine
+                        </div>
+                        <div class="skill-item">
+                            <strong>JSONBin</strong> - Andmete salvestamine väikestes projektides
+                        </div>
+                        <div class="skill-item">
+                            <strong>Responsive design</strong> - Mobile-first lähenemine
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="section" aria-label="Õppimise teekond">
+            <div class="section-header">
+                <h2 class="section-title">📅 Minu õppimise teekond</h2>
+                <p class="section-subtitle">Peamised verstapostid ja saavutused</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2015-2022</div>
+                    <div class="timeline-content">
+                        <h3>🍳 Kokanduse aastad</h3>
+                        <p>
+                            Töötasin professionaalse kokana, õppisin täpsust, kiiruse olulisust ja 
+                            kõrge survetaluvust. Need oskused on mind aidanud ka programmeerimises - 
+                            debugimine kõrge pinge all ei ole probleem!
+                        </p>
+                        <div class="achievement-badges">
+                            <span class="badge">Meeskonnatöö</span>
+                            <span class="badge">Stress management</span>
+                            <span class="badge">Loovus</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>🖥️ Esimesed sammud IT-s</h3>
+                        <p>
+                            Asusin Oulus elama ja otsustasin oma karjääri muuta. Alustasin 
+                            Windows Server 2019 kursusega, mis andis mulle esimese maitse 
+                            süsteemide haldamisest ja tehnilistest väljakutsetest.
+                        </p>
+                        <div class="achievement-badges">
+                            <span class="badge">Windows Server</span>
+                            <span class="badge">Networking</span>
+                            <span class="badge">Active Directory</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>🐍 Python ja veebiarhitektuur</h3>
+                        <p>
+                            Õppisin Pythoni ja lõin oma esimesed projektid. Samal ajal sügavnesin 
+                            veebiarhitektuuri - HTML5, CSS3, JavaScript. Sain FreeCodeCamp 
+                            Responsive Web Design sertifikaadi 300 tunni õppimise järel.
+                        </p>
+                        <div class="achievement-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">HTML5/CSS3</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">FreeCodeCamp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>🚀 Järgmine tase</h3>
+                        <p>
+                            Käesoleval aastal keskendun JavaScript süvendamisele ja React õppimisele. 
+                            Eesmärk on luua täielik full-stack veebirakendus, mis ühendaks minu 
+                            kogemuse kokanduses ja uued IT oskused.
+                        </p>
+                        <div class="achievement-badges">
+                            <span class="badge">React (õppimisfaasis)</span>
+                            <span class="badge">Node.js (planeerimine)</span>
+                            <span class="badge">Full-stack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section class="section" aria-label="Huvid ja väärtused">
+            <div class="section-header">
+                <h2 class="section-title">❤️ Mis mind motiveerib</h2>
+                <p class="section-subtitle">Huvid, väärtused ja unistused</p>
+            </div>
+            
+            <div class="entertainment-section">
+                <div class="entertainment-card">
+                    <h3>🧠 Pidev õppimine</h3>
+                    <p>
+                        Iga päev õpin midagi uut. Tehnoloogia areneb kiiresti ja ma tahan 
+                        sellega sammu pidada. Programmeerimiskeelte õppimine on minu jaoks 
+                        nagu uue keele õppimine - põnev ja väljakutsuv.
+                    </p>
+                </div>
+                
+                <div class="entertainment-card">
+                    <h3>🎮 Probleemide lahendamine</h3>
+                    <p>
+                        Mulle meeldib keeruliste probleemide lahendamine. Nii kokas kui 
+                        programmeerijana on eesmärk sama - leida parim ja efektiivseim 
+                        lahendus antud olukorras.
+                    </p>
+                </div>
+                
+                <div class="entertainment-card">
+                    <h3>🌍 Tehnoloogia ja elu</h3>
+                    <p>
+                        Usun, et tehnoloogia peaks tegema meie elu lihtsamaks. Soovin luua 
+                        lahendusi, mis aitavad inimestel parem elada, eriti tervislik toitumine 
+                        ja köögiga seotud valdkondades.
+                    </p>
+                </div>
+                
+                <div class="entertainment-card">
+                    <h3>🤝 Ühendamine ja jagamine</h3>
+                    <p>
+                        Jagamine on hoolitsemist. Nii nagu jagan oma kokanduskogemusi, 
+                        tahan jagada ka oma IT-oskusi. See koduleht on minu viis anda 
+                        midagi tagasi kogukonnale.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" aria-label="Võta ühendust">
+            <div class="section-header">
+                <h2 class="section-title">🤝 Räägime!</h2>
+                <p class="section-subtitle">Huvitav projekt meeles või tahad lihtsalt vestelda?</p>
+            </div>
+            
+            <div class="cta-group">
+                <a href="../kontakt.html" class="btn-modern btn-primary">
+                    📧 Võta ühendust
+                </a>
+                <a href="../projektid.html" class="btn-modern btn-secondary">
+                    💻 Vaata projekte
+                </a>
+                <a href="../maitsetenurk/kokandus.html" class="btn-modern btn-secondary">
+                    🍳 Tutvu kokandusega
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">Riho Sepp</div>
+                <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/RihoSepp31" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profiil">
+                    <img src="../ikoonid/github.svg" alt="GitHub ikoon" width="24" height="24" />
+                </a>
+                <a href="https://www.linkedin.com/in/rihosepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profiil">
+                    <img src="../ikoonid/linkedin.svg" alt="LinkedIn ikoon" width="24" height="24" />
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud ❤️☕</p>
+        </div>
+    </footer>
+
+<div id="google_translate_element" style="display: none;"></div>
+<script src="../js/translate.js" defer></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- About Page JavaScript -->
+    <script>
+        // About page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('👤 Minust leht laaditud!');
+            
+            // Initialize navigation
+            initializeNavigation();
+            
+            // Initialize animations
+            initializeAnimations();
+            
+            console.log('✅ About komponendid valmis!');
+        });
+
+        // Navigation functionality (same as other pages)
+        function initializeNavigation() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksItems = document.querySelectorAll('.nav-links a');
+
+            if (!navToggle || !navLinks) return;
+
+            // Toggle mobile menu
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu on link click
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu on outside click
+            document.addEventListener('click', (event) => {
+                const isClickInside = navToggle.contains(event.target) || navLinks.contains(event.target);
+                if (!isClickInside && navLinks.classList.contains('active')) {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    navToggle.focus();
+                }
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                let ticking = false;
+                
+                function updateNavbar() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                }
+
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateNavbar);
+                        ticking = true;
+                    }
+                });
+            }
+        }
+
+        // Initialize animations
+        function initializeAnimations() {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections and timeline items
+            document.querySelectorAll('.section, .timeline-item').forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Error handling
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            const loadTime = performance.now();
+            console.log(`⚡ Minust leht laaditud ${Math.round(loadTime)}ms-ga`);
+        });
+    </script>
+</body>
+</html>

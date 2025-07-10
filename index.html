@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CPDHGQBX4K');
+  </script>
+  
+  <!-- Meta Information -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Riho Sepp - IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk Oulust. Leiad siit minu projektid, kokandusretked ja loomingulised tegemised." />
+  <meta name="keywords" content="Riho Sepp, IT spetsialist, tarkvaraarendus, kokandus, Oulu, Python, JavaScript, Windows Server" />
+  <meta name="author" content="Riho Sepp" />
+  <meta name="theme-color" content="#0a0a0a">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Riho Sepp - IT spetsialist ja kokandusega tegelev" />
+  <meta property="og:description" content="IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk. Leiad siit minu projektid ja kokandusretked." />
+  <meta property="og:image" content="./pildid/Riho.png" />
+  <meta property="og:url" content="https://rihosepp.com" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Riho Sepp - IT spetsialist" />
+  <meta name="twitter:description" content="IT spetsialist ja kirglik kokk Oulust" />
+  <meta name="twitter:image" content="./pildid/Riho.png" />
+  
+  <title>Riho Sepp - Avaleht</title>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/main.css" />
+  
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="./pildid/Riho.png">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="./pildid/Riho.png" as="image" />
+  <link rel="preload" href="./pildid/Signature.jpg" as="image" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Riho Sepp",
+    "jobTitle": "IT Specialist",
+    "description": "IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk",
+    "url": "https://rihosepp.com",
+    "image": "https://rihosepp.com/pildid/Riho.png",
+    "sameAs": [
+      "https://github.com/RihoSepp31",
+      "https://www.linkedin.com/in/rihosepp",
+      "https://www.twitch.tv/stepsepp",
+      "https://www.youtube.com/@stepsepp"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oulu",
+      "addressCountry": "Finland"
+    },
+    "knowsAbout": ["Python", "JavaScript", "Windows Server", "Web Development", "Cooking"]
+  }
+  </script>
+</head>
+<body class="dark-theme">
+
+  <!-- Skip to Main Content -->
+  <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="Avaleht">Riho Sepp</a>
+  
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+        
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#" class="active" role="menuitem">Avaleht</a></li>
+        <li role="none"><a href="projektid.html" role="menuitem">Projektid</a></li>
+        <li role="none"><a href="./minust/aboutme.html" role="menuitem">Minust</a></li>
+        <li role="none"><a href="./maitsetenurk/kokandus.html" role="menuitem">Maitsete nurk</a></li>
+        <li role="none"><a href="./meelelahutus/meelelahutus.html" role="menuitem">Meelelahutus</a></li>
+        <li role="none"><a href="meie.html" role="menuitem">Meie lugu</a></li>
+        <li role="none"><a href="raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
+        <li role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
+        
+        <!-- Mobile Language Selection -->
+        <li class="mobile-language-section" role="none">
+          <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
+            <button onclick="translatePage('et')" aria-label="Eesti keel">
+              <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('en')" aria-label="English">
+              <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('ru')" aria-label="Русский">
+              <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+            </button>
+            <button onclick="translatePage('fi')" aria-label="Suomi">
+              <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Desktop Language Selection -->
+  <div id="language-buttons" role="group" aria-label="Keelevalik">
+    <button onclick="translatePage('et')" aria-label="Eesti keel">
+      <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('en')" aria-label="English">
+      <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('ru')" aria-label="Русский">
+      <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
+    </button>
+    <button onclick="translatePage('fi')" aria-label="Suomi">
+      <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Quote Section -->
+    <section class="quote-section" aria-label="Inspireeriv tsitaat">
+      <div class="quote-container">
+        <blockquote class="inspirational-quote">
+          "Selleks et alustada ei pea olema kõikvõimas, aga et olla kõikvõimas tuleb alustada."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <header class="hero-section" aria-label="Tervitussektsioon">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Tere, mina olen <span class="highlight">Riho Sepp</span></h1>
+            <p class="hero-description">
+              IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk.<br />
+              Leiad siit minu projektid, kokandusretked ja loomingulised tegemised.
+            </p>
+            
+            <div class="cta-group">
+              <a href="projektid.html" class="btn-modern btn-primary">
+                <span>💻 Vaata projekte</span>
+              </a>
+              <a href="./maitsetenurk/kokandus.html" class="btn-modern btn-secondary">
+                <span>🍳 Kokanduse maailm</span>
+              </a>
+            </div>
+
+            <div class="signature-container">
+              <img src="./pildid/Signature.jpg" 
+                   alt="Riho Sepp allkiri" 
+                   class="signature" 
+                   loading="lazy"
+                   width="200"
+                   height="80" />
+            </div>
+          </div>
+          
+          <div class="hero-image">
+            <div class="profile-container">
+              <div class="profile-ring"></div>
+              <img src="./pildid/Riho.png" alt="Riho Sepp profiilipilt" class="profile-photo" loading="eager" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Updates Section -->
+    <section class="section updates-section" id="updates-section" aria-label="Viimased teated">
+      <div class="section-header">
+        <h2 class="section-title">📢 Viimased teated</h2>
+        <p class="section-subtitle">Uudised, projektid ja mõtted minu IT ja kokanduse teekonnalt</p>
+        <button id="admin-toggle" onclick="toggleAdminMode()" title="Administraatori režiim" class="admin-btn" aria-label="Administraatori režiim">⚙️</button>
+      </div>
+      
+      <!-- Admin Panel -->
+      <div class="admin-overlay" onclick="toggleAdminMode()"></div>
+      <div id="admin-panel" class="admin-panel hidden" role="dialog" aria-labelledby="admin-title">
+        <h3 id="admin-title">✏️ Lisa uus teade</h3>
+        <div class="admin-form">
+          <label for="update-type">Teate tüüp:</label>
+          <select id="update-type" aria-required="true">
+            <option value="info">ℹ️ Info</option>
+            <option value="success">✅ Uudis</option>
+            <option value="project">🚀 Projekt</option>
+            <option value="learning">📚 Õppimine</option>
+            <option value="warning">⚠️ Tähtis</option>
+          </select>
+          
+          <label for="update-title">Pealkiri:</label>
+          <input type="text" id="update-title" placeholder="Teate pealkiri" aria-required="true" />
+          
+          <label for="update-content">Sisu:</label>
+          <textarea id="update-content" placeholder="Teate sisu" aria-required="true"></textarea>
+          
+          <div class="admin-buttons">
+            <button onclick="addUpdate()" type="button">💾 Salvesta</button>
+            <button onclick="toggleAdminMode()" type="button">❌ Sulge</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Updates List -->
+      <div id="updates-list" class="updates-list" role="feed" aria-label="Viimased teated">
+        <div class="no-updates">Laen teateid...</div>
+      </div>
+      
+      <!-- Show More Button -->
+      <div class="show-more-updates">
+        <button id="show-more-btn" onclick="showMoreUpdates()" class="btn-modern btn-secondary hidden" type="button">
+          Näita rohkem teateid 📰
+        </button>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section" id="blog-section" aria-label="Blogi">
+      <div class="section-header">
+        <h2 class="section-title">📝 Minu blogi</h2>
+        <p class="section-subtitle">IT seiklused, õppimised ja mõtted minu teekonnalt</p>
+      </div>
+      
+      <div class="blog-container">
+        <div class="blog-header">
+          <button id="blog-admin-toggle" onclick="toggleBlogAdmin()" title="Lisa uus postitus" class="blog-admin-btn" aria-label="Lisa uus postitus">✏️</button>
+        </div>
+        
+        <!-- Blog Admin Panel -->
+        <div class="blog-admin-overlay" onclick="toggleBlogAdmin()"></div>
+        <div id="blog-admin-panel" class="blog-admin-panel hidden" role="dialog" aria-labelledby="blog-admin-title">
+          <h3 id="blog-admin-title">✏️ Lisa uus blog postitus</h3>
+          <div class="blog-admin-form">
+            <label for="blog-category">Kategooria:</label>
+            <select id="blog-category">
+              <option value="IT">💻 IT</option>
+              <option value="Õppimine">📚 Õppimine</option>
+              <option value="Mõtted">💭 Mõtted</option>
+              <option value="Uudised">📰 Uudised</option>
+            </select>
+            
+            <label for="blog-title">Pealkiri:</label>
+            <input type="text" id="blog-title" placeholder="Blogi pealkiri" aria-required="true" />
+            
+            <label for="blog-content">Sisu:</label>
+            <textarea id="blog-content" placeholder="Kirjuta oma mõtted siia... Kasuta **bold** ja *italic* teksti jaoks." rows="6" aria-required="true"></textarea>
+            
+            <div class="blog-admin-buttons">
+              <button onclick="addBlogPost()" type="button">📝 Avalda</button>
+              <button onclick="toggleBlogAdmin()" type="button">❌ Sulge</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Posts -->
+        <div id="blog-posts-container" class="blog-posts-list">
+          <div class="no-blog-content">Laen postitusi...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section certificates-section" aria-label="Sertifikaadid">
+      <div class="section-header">
+        <h2 class="section-title">🏆 Sertifikaadid ja saavutused</h2>
+        <p class="section-subtitle">Minu õppimise tee ja professionaalne areng</p>
+      </div>
+      
+      <div class="certificates-grid">
+        <article class="certificate-card">
+          <div class="certificate-image">
+            <img src="./pildid/Cerfitikaat Web designer.jpg" alt="FreeCodeCamp Responsive Web Design sertifikaat" class="certificate-img" loading="lazy">
+          </div>
+          <div class="certificate-content">
+            <h3>✅ Sertifitseeritud veebiarendaja</h3>
+            <p>Sain <strong>FreeCodeCamp</strong> sertifikaadi <em>Responsive Web Design</em> (300h)<br>
+            Väljastatud: <strong>10. detsember 2024</strong></p>
+            <a href="https://www.freecodecamp.org/certification/RihoSepp/responsive-web-design" 
+               class="certificate-link" target="_blank" rel="noopener noreferrer" 
+               aria-label="Vaata FreeCodeCamp sertifikaati">
+              Vaata originaali 🔗
+            </a>
+          </div>
+        </article>
+
+        <article class="certificate-card">
+          <div class="certificate-image">
+            <img src="./pildid/windoesserver2019serfitikaat.png" alt="Windows Server 2019 Administration Udemy sertifikaat" class="certificate-img" loading="lazy">
+          </div>
+          <div class="certificate-content">
+            <h3>🎓 Windows Server 2019 Administration</h3>
+            <p><strong>Platvorm:</strong> Udemy<br>
+            <strong>Läbiviija:</strong> Kevin Brown<br>
+            <strong>Maht:</strong> 21.5 tundi<br>
+            <strong>Lõpetatud:</strong> 4. juuni 2025</p>
+            <a href="https://www.udemy.com/course/windows-server-2019-administration-h/" 
+               class="certificate-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Vaata Windows Server kursust">
+              Vaata kursust 🔗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="section facts-section" id="riho-it-fun-facts" aria-label="Lõbusad faktid">
+      <div class="section-header">
+        <h2 class="section-title">🧠 Faktid, mida sa (vist) ei teadnud</h2>
+        <p class="section-subtitle">Natuke huumorit ja eneseiroonia IT-maailmast</p>
+      </div>
+
+      <div class="facts-grid" id="facts-container">
+        <div class="fact-card">
+          <p>💻 Kui internet läks katki, kutsuti Riho — ta vaatas ruuterit ja see häbenes end korda.</p>
+        </div>
+        <div class="fact-card">
+          <p>🌐 Kui Riho hakkab kodulehte looma, kolib HTML ise tema arvutisse.</p>
+        </div>
+      </div>
+
+      <!-- Show More Facts Button -->
+      <div class="show-more-facts">
+        <button onclick="showMoreFacts()" class="btn-modern btn-secondary" id="more-facts-btn">
+          Näita rohkem nalju 👀
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">Riho Sepp</div>
+        <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/RihoSepp31" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profiil">
+          <img src="./ikoonid/github.svg" alt="GitHub ikoon" width="24" height="24" />
+        </a>
+        <a href="https://www.linkedin.com/in/rihosepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profiil">
+          <img src="./ikoonid/linkedin.svg" alt="LinkedIn ikoon" width="24" height="24" />
+        </a>
+        <a href="https://www.twitch.tv/stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitch kanal">
+          <img src="./ikoonid/twitch.svg" alt="Twitch ikoon" width="24" height="24" />
+        </a>
+        <a href="https://www.youtube.com/@stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube kanal">
+          <img src="./ikoonid/youtube.svg" alt="YouTube ikoon" width="24" height="24" />
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud ❤️☕</p>
+    </div>
+  </footer>
+
+  <!-- Google Translate Element (Hidden) -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/admin.js"></script>
+  
+  <!-- Mobile specific improvements -->
+  <script>
+    // Mobile menu handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      // Toggle menu
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = navLinks.classList.contains('active');
+          
+          navLinks.classList.toggle('active');
+          navToggle.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', !isOpen);
+          
+          // Prevent body scroll when menu is open
+          document.body.style.overflow = isOpen ? '' : 'hidden';
+        });
+      }
+      
+      // Close menu on outside click
+      document.addEventListener('click', function(event) {
+        if (navLinks && navToggle) {
+          const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+          
+          if (!isClickInside && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        }
+      });
+      
+      // Close menu when clicking on links
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks && navToggle) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+      
+      // iOS viewport height fix
+      function setViewportHeight() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      
+      setViewportHeight();
+      window.addEventListener('resize', setViewportHeight);
+      window.addEventListener('orientationchange', setViewportHeight);
+      
+      // Improve admin panel toggles for mobile
+      const adminOverlay = document.querySelector('.admin-overlay');
+      const blogAdminOverlay = document.querySelector('.blog-admin-overlay');
+      
+      // Update toggle functions if they don't exist
+      if (typeof toggleAdminMode === 'undefined') {
+        window.toggleAdminMode = function() {
+          const panel = document.getElementById('admin-panel');
+          if (panel && adminOverlay) {
+            const isOpen = !panel.classList.contains('hidden');
+            panel.classList.toggle('hidden');
+            adminOverlay.classList.toggle('active');
+            document.body.style.overflow = isOpen ? '' : 'hidden';
+          }
+        }
+      }
+      
+      if (typeof toggleBlogAdmin === 'undefined') {
+        window.toggleBlogAdmin = function() {
+          const panel = document.getElementById('blog-admin-panel');
+          if (panel && blogAdminOverlay) {
+            const isOpen = !panel.classList.contains('hidden');
+            panel.classList.toggle('hidden');
+            blogAdminOverlay.classList.toggle('active');
+            document.body.style.overflow = isOpen ? '' : 'hidden';
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

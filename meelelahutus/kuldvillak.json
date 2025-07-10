@@ -1,0 +1,56 @@
+{
+  "categories": [
+    {
+      "name": "Ajalugu",
+      "questions": [
+        { "q": "Mis aastal lõppes Teine maailmasõda?", "a": "1945" },
+        { "q": "Kes oli esimene Eesti president?", "a": "Konstantin Päts" },
+        { "q": "Millal toimus Prantsuse revolutsioon?", "a": "1789" },
+        { "q": "Mis riik ründas Poolat 1939?", "a": "Saksamaa" },
+        { "q": "Mis sündmus algas 1914. aastal?", "a": "Esimene maailmasõda" }
+      ]
+    },
+    {
+      "name": "Geograafia",
+      "questions": [
+        { "q": "Mis on maailma kõrgeim mägi?", "a": "Everest" },
+        { "q": "Mis on Eesti pealinn?", "a": "Tallinn" },
+        { "q": "Kui palju mandrit on maailmas?", "a": "7" },
+        { "q": "Mis jõgi vooleb läbi Pariisi?", "a": "Seine" },
+        { "q": "Mis meri ümbritseb Eestit?", "a": "Läänemeri" }
+      ]
+    },
+    {
+      "name": "Teadus",
+      "questions": [
+        { "q": "Mis keemiline element on H?", "a": "Vesinik" },
+        { "q": "Kui palju kromosoome on inimesel?", "a": "46" },
+        { "q": "Mis planeet on Päikesesüsteemi suurim?", "a": "Jupiter" },
+        { "q": "Kes avastas gravitatsiooni?", "a": "Newton" },
+        { "q": "Mis on vee keemiline valem?", "a": "H2O" }
+      ]
+    },
+    {
+      "name": "Sport",
+      "questions": [
+        { "q": "Kui mitu mängijat on jalgpalliväljal ühes tiimis?", "a": "11" },
+        { "q": "Mis spordiala on Wimbledon?", "a": "Tennis" },
+        { "q": "Kui sageli toimuvad olümpiamängud?", "a": "4 aastat" },
+        { "q": "Mis riigis leiutati korvpall?", "a": "USA" },
+        { "q": "Kui kõrge on korvpallikorv?", "a": "3,05 meetrit" }
+      ]
+    },
+    {
+      "name": "Kultuur",
+      "questions": [
+        { "q": "Kes maalis Mona Lisat?", "a": "Leonardo da Vinci" },
+        { "q": "Mis instrumenti mängis Mozart?", "a": "Klaver" },
+        { "q": "Kes kirjutas Hamletit?", "a": "Shakespeare" },
+        { "q": "Mis riigis on Taj Mahal?", "a": "India" },
+        { "q": "Mis on Eesti rahvuslill?", "a": "Rukkilill" }
+      ]
+    }
+  ],
+  "finalQuestion": "Mis on Eesti suurim saar?",
+  "finalAnswer": "Saaremaa"
+}
