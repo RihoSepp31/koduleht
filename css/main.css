@@ -1464,6 +1464,7 @@ a:hover {
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.9rem;
+  z-index: 10;
 }
 
 /* Back button for sub-pages */
