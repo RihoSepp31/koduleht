@@ -9,6 +9,23 @@
     gtag('js', new Date());
     gtag('config', 'G-CPDHGQBX4K');
   </script>
+
+  <script>
+// FORCE näita hamburgeri nuppu
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  if (navToggle) {
+    navToggle.style.display = 'flex';
+    navToggle.style.flexDirection = 'column';
+    navToggle.style.width = '30px';
+    navToggle.style.height = '24px';
+    navToggle.style.border = '2px solid red';
+    console.log('✅ Hamburger nupp nähtav!');
+  } else {
+    console.log('❌ Hamburger nuppu ei leitud!');
+  }
+});
+</script>
   
   <!-- Meta Information -->
   <meta charset="UTF-8" />
@@ -18,18 +35,33 @@
   <meta name="author" content="Riho Sepp" />
   <meta name="theme-color" content="#0a0a0a">
   
+  <!-- Browser Translation Support -->
+  <meta name="google" content="translate">
+  <meta name="google-translate-customization" content="auto">
+  
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Riho Sepp - IT spetsialist ja kokandusega tegelev" />
   <meta property="og:description" content="IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk. Leiad siit minu projektid ja kokandusretked." />
   <meta property="og:image" content="./pildid/Riho.png" />
   <meta property="og:url" content="https://rihosepp.com" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="et_EE" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="fi_FI" />
+  <meta property="og:locale:alternate" content="ru_RU" />
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Riho Sepp - IT spetsialist" />
   <meta name="twitter:description" content="IT spetsialist ja kirglik kokk Oulust" />
   <meta name="twitter:image" content="./pildid/Riho.png" />
+  
+  <!-- Alternative Language Links -->
+  <link rel="alternate" hreflang="et" href="https://rihosepp.com/" />
+  <link rel="alternate" hreflang="en" href="https://rihosepp.com/en/" />
+  <link rel="alternate" hreflang="fi" href="https://rihosepp.com/fi/" />
+  <link rel="alternate" hreflang="ru" href="https://rihosepp.com/ru/" />
+  <link rel="alternate" hreflang="x-default" href="https://rihosepp.com/" />
   
   <title>Riho Sepp - Avaleht</title>
   
@@ -43,7 +75,7 @@
   <link rel="preload" href="./pildid/Riho.png" as="image" />
   <link rel="preload" href="./pildid/Signature.jpg" as="image" />
   
-  <!-- Structured Data -->
+  <!-- Structured Data with Language Support -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,6 +85,8 @@
     "description": "IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk",
     "url": "https://rihosepp.com",
     "image": "https://rihosepp.com/pildid/Riho.png",
+    "inLanguage": "et",
+    "availableLanguage": ["et", "en", "fi", "ru"],
     "sameAs": [
       "https://github.com/RihoSepp31",
       "https://www.linkedin.com/in/rihosepp",
@@ -76,7 +110,7 @@
   <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
     <div class="nav-container">
-      <a href="#" class="logo" aria-label="Avaleht">Riho Sepp</a>
+      <a href="#" class="logo" aria-label="Avaleht"><span translate="no">Riho Sepp</span></a>
   
       <!-- Mobile Menu Toggle -->
       <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
@@ -94,43 +128,9 @@
         <li role="none"><a href="meie.html" role="menuitem">Meie lugu</a></li>
         <li role="none"><a href="raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
         <li role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
-        
-        <!-- Mobile Language Selection -->
-        <li class="mobile-language-section" role="none">
-          <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
-            <button onclick="translatePage('et')" aria-label="Eesti keel">
-              <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('en')" aria-label="English">
-              <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('ru')" aria-label="Русский">
-              <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('fi')" aria-label="Suomi">
-              <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-            </button>
-          </div>
-        </li>
       </ul>
     </div>
   </nav>
-
-  <!-- Desktop Language Selection -->
-  <div id="language-buttons" role="group" aria-label="Keelevalik">
-    <button onclick="translatePage('et')" aria-label="Eesti keel">
-      <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('en')" aria-label="English">
-      <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('ru')" aria-label="Русский">
-      <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('fi')" aria-label="Suomi">
-      <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-    </button>
-  </div>
 
   <!-- Main Content -->
   <main id="main-content">
@@ -148,7 +148,7 @@
       <div class="hero-container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>Tere, mina olen <span class="highlight">Riho Sepp</span></h1>
+            <h1>Tere, mina olen <span class="highlight" translate="no">Riho Sepp</span></h1>
             <p class="hero-description">
               IT spetsialist, tarkvaraarenduse huviline ja kirglik kokk.<br />
               Leiad siit minu projektid, kokandusretked ja loomingulised tegemised.
@@ -169,7 +169,8 @@
                    class="signature" 
                    loading="lazy"
                    width="200"
-                   height="80" />
+                   height="80"
+                   translate="no" />
             </div>
           </div>
           
@@ -290,7 +291,7 @@
           </div>
           <div class="certificate-content">
             <h3>✅ Sertifitseeritud veebiarendaja</h3>
-            <p>Sain <strong>FreeCodeCamp</strong> sertifikaadi <em>Responsive Web Design</em> (300h)<br>
+            <p>Sain <strong translate="no">FreeCodeCamp</strong> sertifikaadi <em translate="no">Responsive Web Design</em> (300h)<br>
             Väljastatud: <strong>10. detsember 2024</strong></p>
             <a href="https://www.freecodecamp.org/certification/RihoSepp/responsive-web-design" 
                class="certificate-link" target="_blank" rel="noopener noreferrer" 
@@ -305,9 +306,9 @@
             <img src="./pildid/windoesserver2019serfitikaat.png" alt="Windows Server 2019 Administration Udemy sertifikaat" class="certificate-img" loading="lazy">
           </div>
           <div class="certificate-content">
-            <h3>🎓 Windows Server 2019 Administration</h3>
-            <p><strong>Platvorm:</strong> Udemy<br>
-            <strong>Läbiviija:</strong> Kevin Brown<br>
+            <h3>🎓 <span translate="no">Windows Server 2019 Administration</span></h3>
+            <p><strong>Platvorm:</strong> <span translate="no">Udemy</span><br>
+            <strong>Läbiviija:</strong> <span translate="no">Kevin Brown</span><br>
             <strong>Maht:</strong> 21.5 tundi<br>
             <strong>Lõpetatud:</strong> 4. juuni 2025</p>
             <a href="https://www.udemy.com/course/windows-server-2019-administration-h/" 
@@ -329,10 +330,10 @@
 
       <div class="facts-grid" id="facts-container">
         <div class="fact-card">
-          <p>💻 Kui internet läks katki, kutsuti Riho — ta vaatas ruuterit ja see häbenes end korda.</p>
+          <p>💻 Kui internet läks katki, kutsuti <span translate="no">Riho</span> — ta vaatas ruuterit ja see häbenes end korda.</p>
         </div>
         <div class="fact-card">
-          <p>🌐 Kui Riho hakkab kodulehte looma, kolib HTML ise tema arvutisse.</p>
+          <p>🌐 Kui <span translate="no">Riho</span> hakkab kodulehte looma, kolib <span translate="no">HTML</span> ise tema arvutisse.</p>
         </div>
       </div>
 
@@ -349,7 +350,7 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <div class="footer-brand">
-        <div class="logo">Riho Sepp</div>
+        <div class="logo" translate="no">Riho Sepp</div>
         <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
       </div>
       
@@ -370,12 +371,9 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud ❤️☕</p>
+      <p>&copy; 2025 <span translate="no">Riho Sepp</span> - Kõik õigused kaitstud ❤️☕</p>
     </div>
   </footer>
-
-  <!-- Google Translate Element (Hidden) -->
-  <div id="google_translate_element" style="display: none;"></div>
 
   <!-- Scripts -->
   <script src="./js/main.js"></script>

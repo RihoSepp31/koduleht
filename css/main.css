@@ -345,62 +345,18 @@ a:hover {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* ===== LANGUAGE BUTTONS ===== */
-#language-buttons {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  gap: 6px;
-  z-index: calc(var(--z-modal) + 1);
-  background: var(--bg-glass);
-  backdrop-filter: blur(25px);
-  border-radius: var(--radius-md);
-  padding: 6px;
-  border: 1px solid var(--border-glass);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-}
-
-#language-buttons:hover {
-  background: var(--bg-glass-hover);
-  transform: scale(1.02);
-  box-shadow: var(--glow-green);
-}
-
-#language-buttons button {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-#language-buttons button:hover {
-  background: var(--bg-glass-hover);
-  transform: scale(1.08);
-  box-shadow: var(--glow-green);
-}
-
-#language-buttons img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 3px;
-  transition: all var(--transition-normal);
-}
-
-/* Mobiili keelevalik */
+/* ===== GOOGLE TRANSLATE HIDDEN ===== */
+#google_translate_element,
+#language-buttons,
 .mobile-language-section {
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
 
 /* ===== HERO & QUOTE SECTIONS ===== */
@@ -564,6 +520,26 @@ a:hover {
 .profile-photo:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-lg), var(--glow-green);
+}
+
+/* Signature container */
+.signature-container {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.signature {
+  max-width: 200px;
+  height: auto;
+  opacity: 0.8;
+  transition: all var(--transition-normal);
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.signature:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* ===== SECTIONS ===== */
@@ -1599,6 +1575,14 @@ a:hover {
   .admin-buttons, .blog-admin-buttons {
     flex-direction: column;
   }
+
+  .signature-container {
+    justify-content: center;
+  }
+
+  .signature {
+    max-width: 150px;
+  }
 }
 
 /* Large Mobile (481px - 768px) */
@@ -1676,57 +1660,6 @@ a:hover {
     background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
     color: var(--bg-primary);
   }
-  
-  /* Mobiili keelevalik */
-  .mobile-language-section {
-    display: block;
-    width: 100%;
-    border-top: 1px solid var(--border-glass);
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-  
-  .language-menu-mobile {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  .language-menu-mobile button {
-    width: 45px;
-    height: 45px;
-    border: 2px solid var(--border-glass);
-    background: var(--bg-glass);
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-  }
-  
-  .language-menu-mobile button:hover,
-  .language-menu-mobile button:focus {
-    background: var(--bg-glass-hover);
-    border-color: var(--accent-green);
-    transform: scale(1.1);
-    box-shadow: var(--glow-green);
-  }
-  
-  .language-menu-mobile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 3px;
-  }
-  
-  /* Peida desktop keelevalik mobiilis */
-  #language-buttons {
-    display: none !important;
-  }
 
   .hero-content {
     grid-template-columns: 1fr;
@@ -1771,6 +1704,10 @@ a:hover {
     text-align: center;
     gap: var(--space-md);
   }
+
+  .signature-container {
+    justify-content: center;
+  }
 }
 
 /* Tablet (769px - 1024px) */
@@ -1810,6 +1747,10 @@ a:hover {
 
   .certificates-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .signature-container {
+    justify-content: center;
   }
 }
 
@@ -1986,7 +1927,6 @@ html.translated-rtl {
   }
   
   .navbar,
-  #language-buttons,
   .admin-btn,
   .blog-admin-btn,
   .nav-toggle {
@@ -2007,6 +1947,7 @@ html.translated-rtl {
     page-break-after: always;
   }
 }
+
 /* ===== OVERLAY STYLES ===== */
 .admin-overlay,
 .blog-admin-overlay {
@@ -2192,15 +2133,227 @@ html.translated-rtl {
     overflow-scrolling: touch;
   }
 }
-/* Lisage see main.css faili KÕIGE LÕPPU */
+/* LISA SEE KOOD MAIN.CSS FAILI, ASENDA OLEMASOLEV MOBILE SECTION */
+
+/* ===== MOBILE NAVIGATION FIX ===== */
 @media (max-width: 768px) {
-  body {
-    padding-top: 60px !important;
-  }
   .navbar {
+    padding: 12px 20px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    z-index: 1000 !important;
+  }
+  
+  .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .logo {
+    font-size: 1.4rem !important;
+    color: var(--accent-green) !important;
+    font-weight: 700 !important;
+    z-index: 1001 !important;
+  }
+  
+  /* HAMBURGER NUPP - PEAB OLEMA NÄHTAV! */
+  .nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 30px !important;
+    height: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    z-index: 1001 !important;
+    position: relative !important;
+  }
+  
+  .nav-toggle span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: var(--text-primary) !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+    transform-origin: center !important;
+  }
+  
+  /* HAMBURGER HOVER EFFECT */
+  .nav-toggle:hover span {
+    background: var(--accent-green) !important;
+  }
+  
+  /* HAMBURGER AKTIIVSENA (X) */
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px) !important;
+    background: var(--accent-green) !important;
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+    background: var(--accent-green) !important;
+  }
+  
+  /* PEIDA DESKTOP MENÜÜ MOBIILIS */
+  .nav-links {
+    position: fixed !important;
+    top: 70px !important;
+    left: 15px !important;
+    right: 15px !important;
+    background: rgba(10, 10, 10, 0.98) !important;
+    backdrop-filter: blur(30px) !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--border-glass) !important;
+    padding: 25px 20px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-20px) scale(0.95) !important;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+    z-index: 999 !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+  }
+  
+  /* MENÜÜ AKTIIVNE SEISUND */
+  .nav-links.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) scale(1) !important;
+  }
+  
+  /* MENÜÜ LINK STIILID */
+  .nav-links li {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .nav-links a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 18px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    border-radius: 12px !important;
+    background: var(--bg-glass) !important;
+    border: 1px solid var(--border-glass) !important;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 8px !important;
+    min-height: 54px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .nav-links a:hover {
+    background: var(--bg-glass-hover) !important;
+    border-color: var(--accent-green) !important;
+    color: var(--accent-green) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.2) !important;
+  }
+  
+  .nav-links a.active {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-blue)) !important;
+    color: var(--bg-primary) !important;
+    border-color: var(--accent-green) !important;
+  }
+  
+  /* MOBIILI KEELEVALIK */
+  .mobile-language-section {
+    display: block !important;
+    width: 100% !important;
+    border-top: 1px solid var(--border-glass) !important;
+    padding-top: 20px !important;
+    margin-top: 15px !important;
+  }
+  
+  .language-menu-mobile {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: center !important;
     padding: 10px 0 !important;
   }
-  .quote-section {
-    padding-top: 4rem !important;
+  
+  .language-menu-mobile button {
+    width: 50px !important;
+    height: 50px !important;
+    border: 2px solid var(--border-glass) !important;
+    background: var(--bg-glass) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .language-menu-mobile button:hover {
+    background: var(--bg-glass-hover) !important;
+    border-color: var(--accent-green) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3) !important;
+  }
+  
+  .language-menu-mobile img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+  }
+  
+  /* PEIDA DESKTOP KEEL NUPUD */
+  #language-buttons {
+    display: none !important;
+  }
+  
+  /* LISA BODY PADDING ET NAV EI KATAKS */
+  body {
+    padding-top: 80px !important;
+  }
+  
+  /* OVERLAY MOBIILI MENÜÜ JAOKS */
+  .nav-links.active::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    z-index: -1 !important;
+    backdrop-filter: blur(3px) !important;
+  }
+}
+
+/* DEBUGGING - AJUTISELT TESTIMISEKS */
+@media (max-width: 768px) {
+  .nav-toggle {
+    border: 2px solid red !important; /* NÄED KAS NUPP ON OLEMAS */
+  }
+  
+  .nav-toggle span {
+    background: red !important; /* NÄED KAS JOONED ON OLEMAS */
   }
 }
