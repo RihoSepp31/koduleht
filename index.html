@@ -9,23 +9,6 @@
     gtag('js', new Date());
     gtag('config', 'G-CPDHGQBX4K');
   </script>
-
-  <script>
-// FORCE näita hamburgeri nuppu
-document.addEventListener('DOMContentLoaded', function() {
-  const navToggle = document.querySelector('.nav-toggle');
-  if (navToggle) {
-    navToggle.style.display = 'flex';
-    navToggle.style.flexDirection = 'column';
-    navToggle.style.width = '30px';
-    navToggle.style.height = '24px';
-    navToggle.style.border = '2px solid red';
-    console.log('✅ Hamburger nupp nähtav!');
-  } else {
-    console.log('❌ Hamburger nuppu ei leitud!');
-  }
-});
-</script>
   
   <!-- Meta Information -->
   <meta charset="UTF-8" />
@@ -378,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Scripts -->
   <script src="./js/main.js"></script>
   <script src="./js/admin.js"></script>
-  
+  <script src="./js/navigation.js"></script>
   <!-- Mobile specific improvements -->
   <script>
     // Mobile menu handling
