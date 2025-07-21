@@ -46,13 +46,16 @@
 </head>
 <body class="dark-theme">
 
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element" style="display: none;"></div>
+
   <!-- Skip to Main Content -->
   <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
 
   <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
     <div class="nav-container">
-      <a href="index.html" class="logo" aria-label="Avaleht">Riho Sepp</a>
+      <a href="index.html" class="logo" aria-label="Avaleht"><span translate="no">Riho Sepp</span></a>
   
       <!-- Mobile Menu Toggle -->
       <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
@@ -71,42 +74,27 @@
         <li role="none"><a href="raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
         <li role="none"><a href="kontakt.html" role="menuitem">Kontakt</a></li>
         
-        <!-- Mobile Language Selection -->
-        <li class="mobile-language-section" role="none">
-          <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
-            <button onclick="translatePage('et')" aria-label="Eesti keel">
-              <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('en')" aria-label="English">
-              <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('ru')" aria-label="Русский">
-              <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-            </button>
-            <button onclick="translatePage('fi')" aria-label="Suomi">
-              <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-            </button>
+        <!-- Desktop keelevalik -->
+        <li role="none" id="language-buttons" class="language-selector">
+          <button onclick="translatePage('et')" class="lang-btn active" title="Eesti keel">🇪🇪 ET</button>
+          <button onclick="translatePage('en')" class="lang-btn" title="English">🇬🇧 EN</button>
+          <button onclick="translatePage('fi')" class="lang-btn" title="Suomi">🇫🇮 FI</button>
+          <button onclick="translatePage('ru')" class="lang-btn" title="Русский">🇷🇺 RU</button>
+        </li>
+        
+        <!-- Mobiilne keelevalik -->
+        <li role="none" class="language-menu-mobile">
+          <div class="mobile-lang-title">Vali keel / Choose language:</div>
+          <div class="mobile-lang-buttons">
+            <button onclick="translatePage('et')" class="lang-btn-mobile active">🇪🇪 Eesti</button>
+            <button onclick="translatePage('en')" class="lang-btn-mobile">🇬🇧 English</button>
+            <button onclick="translatePage('fi')" class="lang-btn-mobile">🇫🇮 Suomi</button>
+            <button onclick="translatePage('ru')" class="lang-btn-mobile">🇷🇺 Русский</button>
           </div>
         </li>
       </ul>
     </div>
   </nav>
-
-  <!-- Desktop Language Selection -->
-  <div id="language-buttons" role="group" aria-label="Keelevalik">
-    <button onclick="translatePage('et')" aria-label="Eesti keel">
-      <img src="./lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('en')" aria-label="English">
-      <img src="./lipud/gb.svg" alt="UK flag" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('ru')" aria-label="Русский">
-      <img src="./lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-    </button>
-    <button onclick="translatePage('fi')" aria-label="Suomi">
-      <img src="./lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-    </button>
-  </div>
 
   <!-- Main Content -->
   <main id="main-content">
@@ -359,7 +347,7 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <div class="footer-brand">
-        <div class="logo">Riho Sepp</div>
+        <div class="logo" translate="no">Riho Sepp</div>
         <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
       </div>
       
@@ -370,21 +358,27 @@
         <a href="https://www.linkedin.com/in/rihosepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profiil">
           <img src="./ikoonid/linkedin.svg" alt="LinkedIn ikoon" width="24" height="24" />
         </a>
+        <a href="https://www.twitch.tv/stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitch kanal">
+          <img src="./ikoonid/twitch.svg" alt="Twitch ikoon" width="24" height="24" />
+        </a>
+        <a href="https://www.youtube.com/@stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube kanal">
+          <img src="./ikoonid/youtube.svg" alt="YouTube ikoon" width="24" height="24" />
+        </a>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud ❤️☕</p>
+      <p>&copy; 2025 <span translate="no">Riho Sepp</span> - Kõik õigused kaitstud ❤️☕</p>
     </div>
   </footer>
 
-  <!-- Google Translate Element (Hidden) -->
-<div id="google_translate_element" style="display: none;"></div>
-
-<!-- Tõlkeskriptid -->
-<script src="./js/translate.js" defer></script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/navigation.js"></script>
+  
+  <!-- Google Translate Scripts -->
+  <script src="./js/translate.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
   <!-- Projects JavaScript -->
   <script>
@@ -401,72 +395,50 @@
       }, 500);
     });
 
-    // Navigation functionality (same as index.html)
+    // Navigation functionality
     function initializeNavigation() {
       const navToggle = document.querySelector('.nav-toggle');
       const navLinks = document.querySelector('.nav-links');
-      const navLinksItems = document.querySelectorAll('.nav-links a');
-
-      if (!navToggle || !navLinks) return;
-
-      // Toggle mobile menu
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        navToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
-
-      // Close menu on link click
-      navLinksItems.forEach(link => {
-        link.addEventListener('click', () => {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-        });
-      });
-
-      // Close menu on outside click
-      document.addEventListener('click', (event) => {
-        const isClickInside = navToggle.contains(event.target) || navLinks.contains(event.target);
-        if (!isClickInside && navLinks.classList.contains('active')) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-        }
-      });
-
-      // Close menu on escape key
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && navLinks.classList.contains('active')) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-          navToggle.focus();
-        }
-      });
-
-      // Navbar scroll effect
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        let ticking = false;
-        
-        function updateNavbar() {
-          if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-          } else {
-            navbar.classList.remove('scrolled');
-          }
-          ticking = false;
-        }
-
-        window.addEventListener('scroll', () => {
-          if (!ticking) {
-            requestAnimationFrame(updateNavbar);
-            ticking = true;
-          }
+      
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = navLinks.classList.contains('active');
+          
+          navLinks.classList.toggle('active');
+          navToggle.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', !isOpen);
+          
+          // Prevent body scroll when menu is open
+          document.body.style.overflow = isOpen ? '' : 'hidden';
         });
       }
+      
+      // Close menu on outside click
+      document.addEventListener('click', function(event) {
+        if (navLinks && navToggle) {
+          const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+          
+          if (!isClickInside && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        }
+      });
+      
+      // Close menu when clicking on links
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks && navToggle) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      });
     }
 
     // Toggle project sections
