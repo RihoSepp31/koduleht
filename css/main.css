@@ -2037,3 +2037,451 @@ body.translating {
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+/* LISAGE NEED PARANDUSED OMA main.css FAILI LÕPPU */
+
+/* ===== MOBIILSE VAATE PARANDUSED ===== */
+
+/* 1. MENÜÜ PARANDUS - Z-INDEX */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0; /* Muudetud -100% -> 0 ajutiselt testimiseks */
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    z-index: 9999 !important; /* Kõrgem z-index */
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Navbar kõrgem z-index */
+  .navbar {
+    z-index: 10000 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Hamburger nupp */
+  .nav-toggle {
+    z-index: 10001 !important;
+    position: relative;
+  }
+}
+
+/* 2. KEELE NUPUD MOBIILIS */
+@media (max-width: 768px) {
+  /* Peida desktop keelevalik täielikult */
+  .language-selector {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Näita ainult mobiilset keelevalikut */
+  .language-menu-mobile {
+    display: block !important;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Mobiilsed keele nupud */
+  .lang-btn-mobile {
+    width: 100%;
+    padding: 12px !important;
+    font-size: 16px !important;
+    margin: 5px 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-lang-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+}
+
+/* 3. LEHE LAIUSE PARANDUS */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+@media (max-width: 768px) {
+  /* Hero section mobile fix */
+  .hero-section {
+    padding: 20px 15px;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .profile-container {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+  }
+
+  .profile-photo {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  /* Quote section mobile */
+  .quote-section {
+    padding: 80px 15px 40px;
+    min-height: auto;
+  }
+
+  .inspirational-quote {
+    padding: 25px 20px;
+    font-size: 1.1rem;
+    margin: 0 10px;
+  }
+
+  /* Sections padding */
+  .section {
+    padding: 40px 15px;
+  }
+
+  /* Facts grid mobile */
+  .facts-grid {
+    padding: 0 10px;
+  }
+
+  .fact-card {
+    margin: 0 5px 15px 5px;
+    padding: 20px 15px;
+  }
+
+  /* CTA buttons mobile */
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .btn-modern {
+    width: 100%;
+    max-width: none;
+    justify-content: center;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: 30px 15px 20px;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  /* Admin panels mobile */
+  .admin-panel,
+  .blog-admin-panel {
+    margin: 10px;
+    padding: 20px 15px;
+  }
+
+  /* Navigation items mobile */
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+  }
+}
+
+/* 4. BODY PADDING TOP FIX */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px !important;
+  }
+}
+
+/* 5. HAMBURGER MENU ANIMATION FIX */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10001;
+  gap: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+/* 6. LANGUAGE BUTTONS TOUCH TARGETS */
+@media (max-width: 768px) {
+  .lang-btn-mobile {
+    min-height: 48px; /* Suurem puutepind */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 7. PREVENT HORIZONTAL SCROLL */
+@media (max-width: 768px) {
+  * {
+    max-width: 100vw !important;
+  }
+
+  .hero-image,
+  .profile-container,
+  .signature-container {
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  /* Remove any negative margins or absolute positioning that might cause overflow */
+  [style*="position: absolute"] {
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+/* ===== iOS/IPHONE SAFARI PARANDUSED ===== */
+/* LISAGE NEED main.css FAILI LÕPPU */
+
+/* 1. iOS SAFE AREA INSETS */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-top: max(15px, env(safe-area-inset-top));
+  }
+  
+  .nav-links {
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+  
+  body {
+    padding-top: max(60px, calc(60px + env(safe-area-inset-top))) !important;
+  }
+}
+
+/* 2. iOS WEBKIT FIXES */
+@media (max-width: 768px) {
+  /* Parandab -webkit-overflow-scrolling iOS-il */
+  .nav-links {
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 60px) !important;
+    height: calc(var(--vh, 1vh) * 100 - 60px) !important;
+    background: rgba(10, 10, 10, 0.98) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(20px) !important;
+    z-index: 9999 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease !important;
+    -webkit-transition: -webkit-transform 0.3s ease !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+
+  .nav-links.active {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+  }
+
+  /* iOS hamburger fix */
+  .nav-toggle {
+    display: flex !important;
+    position: relative !important;
+    z-index: 10001 !important;
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
+  }
+
+  /* Prevent iOS bounce */
+  body {
+    position: fixed !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body.menu-open {
+    overflow: hidden !important;
+  }
+}
+
+/* 3. iOS TOUCH TARGETS */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Suuremad puutepinnad iOS-il */
+  .nav-links a,
+  .lang-btn-mobile,
+  .btn-modern,
+  button {
+    min-height: 44px !important; /* Apple'i soovitus */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  }
+
+  /* Keele nupud iOS-il */
+  .lang-btn-mobile {
+    width: 100% !important;
+    padding: 16px !important;
+    margin: 8px 0 !important;
+    font-size: 17px !important; /* iOS optimaalne */
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+}
+
+/* 4. iOS VIEWPORT FIX */
+@supports (-webkit-touch-callout: none) {
+  /* iOS only */
+  .hero-section,
+  .quote-section {
+    min-height: -webkit-fill-available !important;
+  }
+
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 5. iOS HORIZONTAL SCROLL FIX */
+html {
+  overflow-x: hidden !important;
+  position: relative !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  position: relative !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .hero-container,
+  .section,
+  .footer {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Kõik pildid ja konteinerid */
+  img, 
+  .profile-container,
+  .hero-image,
+  .signature-container {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* 6. iOS NOTCH SUPPORT (iPhone X+) */
+@supports (padding: env(safe-area-inset-left)) {
+  @media (max-width: 768px) {
+    .nav-container {
+      padding-left: max(15px, env(safe-area-inset-left));
+      padding-right: max(15px, env(safe-area-inset-right));
+    }
+
+    .nav-links {
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+      padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* 7. LANGUAGE SELECTOR iOS FIX */
+@media (max-width: 768px) {
+  /* Täielikult peida desktop keelevalik */
+  #language-buttons,
+  .language-selector {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+
+  /* Ainult mobiilne keelevalik aktiivsena */
+  .nav-links.active .language-menu-mobile {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* 8. iOS ANIMATION PERFORMANCE */
+@media (max-width: 768px) {
+  * {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+
+  .nav-links {
+    will-change: transform;
+  }
+}

@@ -56,13 +56,16 @@
 </head>
 <body class="dark-theme">
 
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display: none;"></div>
+
     <!-- Skip to Main Content -->
     <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
 
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
         <div class="nav-container">
-            <a class="logo" href="../index.html" aria-label="Avaleht">Riho Sepp</a>
+            <a class="logo" href="../index.html" aria-label="Avaleht"><span translate="no">Riho Sepp</span></a>
             
             <!-- Mobile Menu Toggle -->
             <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
@@ -81,42 +84,27 @@
                 <li role="none"><a href="../raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
                 <li role="none"><a href="../kontakt.html" role="menuitem">Kontakt</a></li>
                 
-                <!-- Mobile Language Selection -->
-                <li class="mobile-language-section" role="none">
-                    <div class="language-menu-mobile" role="group" aria-label="Keelevalik">
-                        <button onclick="translatePage('et')" aria-label="Eesti keel">
-                            <img src="../lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-                        </button>
-                        <button onclick="translatePage('en')" aria-label="English">
-                            <img src="../lipud/gb.svg" alt="UK flag" width="24" height="18" />
-                        </button>
-                        <button onclick="translatePage('ru')" aria-label="Русский">
-                            <img src="../lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-                        </button>
-                        <button onclick="translatePage('fi')" aria-label="Suomi">
-                            <img src="../lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-                        </button>
+                <!-- Desktop keelevalik -->
+                <li role="none" id="language-buttons" class="language-selector">
+                    <button onclick="translatePage('et')" class="lang-btn active" title="Eesti keel">🇪🇪 ET</button>
+                    <button onclick="translatePage('en')" class="lang-btn" title="English">🇬🇧 EN</button>
+                    <button onclick="translatePage('fi')" class="lang-btn" title="Suomi">🇫🇮 FI</button>
+                    <button onclick="translatePage('ru')" class="lang-btn" title="Русский">🇷🇺 RU</button>
+                </li>
+                
+                <!-- Mobiilne keelevalik -->
+                <li role="none" class="language-menu-mobile">
+                    <div class="mobile-lang-title">Vali keel / Choose language:</div>
+                    <div class="mobile-lang-buttons">
+                        <button onclick="translatePage('et')" class="lang-btn-mobile active">🇪🇪 Eesti</button>
+                        <button onclick="translatePage('en')" class="lang-btn-mobile">🇬🇧 English</button>
+                        <button onclick="translatePage('fi')" class="lang-btn-mobile">🇫🇮 Suomi</button>
+                        <button onclick="translatePage('ru')" class="lang-btn-mobile">🇷🇺 Русский</button>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <!-- Desktop Language Selection -->
-    <div id="language-buttons" role="group" aria-label="Keelevalik">
-        <button onclick="translatePage('et')" aria-label="Eesti keel">
-            <img src="../lipud/ee.svg" alt="Eesti lipp" width="24" height="18" />
-        </button>
-        <button onclick="translatePage('en')" aria-label="English">
-            <img src="../lipud/gb.svg" alt="UK flag" width="24" height="18" />
-        </button>
-        <button onclick="translatePage('ru')" aria-label="Русский">
-            <img src="../lipud/ru.svg" alt="Venemaa lipp" width="24" height="18" />
-        </button>
-        <button onclick="translatePage('fi')" aria-label="Suomi">
-            <img src="../lipud/fi.svg" alt="Soome lipp" width="24" height="18" />
-        </button>
-    </div>
 
     <!-- Back Button -->
     <a href="../index.html" class="back-button" aria-label="Tagasi avalehele">
@@ -130,7 +118,7 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Mina olen <span class="highlight">Riho Sepp</span></h1>
+                        <h1>Mina olen <span class="highlight" translate="no">Riho Sepp</span></h1>
                         <p class="hero-description">
                             Sihikindel, järjepidev ja fokuseeritud tegutseja. Mind paeluvad programmeerimine, 
                             kokandus ja digimaailm – püüan pidevalt oma teadmisi ja oskusi laiendada.
@@ -193,74 +181,42 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>💻 Programmeerimine</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <strong>Python</strong> - Esimene programmeerimiskeel, millega tegelen
-                        </div>
-                        <div class="skill-item">
-                            <strong>JavaScript</strong> - Veebirakenduste loomine ja DOM manipuleerimine
-                        </div>
-                        <div class="skill-item">
-                            <strong>HTML5 & CSS3</strong> - Responsive web design ja moodne kujundus
-                        </div>
-                        <div class="skill-item">
-                            <strong>React</strong> - Õppimisfaasis, 2025 eesmärk
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><strong>Python</strong> - Esimene programmeerimiskeel, millega tegelen</li>
+                        <li><strong>JavaScript</strong> - Veebirakenduste loomine ja DOM manipuleerimine</li>
+                        <li><strong>HTML5 & CSS3</strong> - Responsive web design ja moodne kujundus</li>
+                        <li><strong>React</strong> - Õppimisfaasis, 2025 eesmärk</li>
+                    </ul>
                 </div>
                 
                 <div class="skill-category">
                     <h3>🖥️ Süsteemide haldamine</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <strong>Windows Server 2019</strong> - Sertifitseeritud administraator
-                        </div>
-                        <div class="skill-item">
-                            <strong>Active Directory</strong> - Kasutajate ja õiguste haldamine
-                        </div>
-                        <div class="skill-item">
-                            <strong>Võrgu seadistamine</strong> - Põhilised networking oskused
-                        </div>
-                        <div class="skill-item">
-                            <strong>Git</strong> - Versioonihaldus ja koostöö
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><strong>Windows Server 2019</strong> - Sertifitseeritud administraator</li>
+                        <li><strong>Active Directory</strong> - Kasutajate ja õiguste haldamine</li>
+                        <li><strong>Võrgu seadistamine</strong> - Põhilised networking oskused</li>
+                        <li><strong>Git</strong> - Versioonihaldus ja koostöö</li>
+                    </ul>
                 </div>
                 
                 <div class="skill-category">
                     <h3>🍳 Kokandus ja loovus</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <strong>Professionaalne kokandus</strong> - 10+ aastat kogemust
-                        </div>
-                        <div class="skill-item">
-                            <strong>Menüüde planeerimine</strong> - Retseptide loomine ja optimeerimine
-                        </div>
-                        <div class="skill-item">
-                            <strong>Meeskonnatöö</strong> - Köögibrigaadi juhtimine
-                        </div>
-                        <div class="skill-item">
-                            <strong>Loovus ja innovatsioon</strong> - Uute lahenduste leidmine
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><strong>Professionaalne kokandus</strong> - 10+ aastat kogemust</li>
+                        <li><strong>Menüüde planeerimine</strong> - Retseptide loomine ja optimeerimine</li>
+                        <li><strong>Meeskonnatöö</strong> - Köögibrigaadi juhtimine</li>
+                        <li><strong>Loovus ja innovatsioon</strong> - Uute lahenduste leidmine</li>
+                    </ul>
                 </div>
                 
                 <div class="skill-category">
                     <h3>🔧 Tööriistad ja tehnoloogiad</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <strong>VS Code</strong> - Peamine arenduskeskkond
-                        </div>
-                        <div class="skill-item">
-                            <strong>Chrome DevTools</strong> - Debugging ja testimine
-                        </div>
-                        <div class="skill-item">
-                            <strong>JSONBin</strong> - Andmete salvestamine väikestes projektides
-                        </div>
-                        <div class="skill-item">
-                            <strong>Responsive design</strong> - Mobile-first lähenemine
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><strong>VS Code</strong> - Peamine arenduskeskkond</li>
+                        <li><strong>Chrome DevTools</strong> - Debugging ja testimine</li>
+                        <li><strong>JSONBin</strong> - Andmete salvestamine väikestes projektides</li>
+                        <li><strong>Responsive design</strong> - Mobile-first lähenemine</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -284,11 +240,6 @@
                             kõrget survetaluvust. Need oskused on mind aidanud ka programmeerimises - 
                             debugimine kõrge pinge all ei ole probleem!
                         </p>
-                        <div class="achievement-badges">
-                            <span class="badge">Meeskonnatöö</span>
-                            <span class="badge">Stress management</span>
-                            <span class="badge">Loovus</span>
-                        </div>
                     </div>
                 </div>
                 
@@ -301,11 +252,6 @@
                             olen pidevalt ennast arendanud ja täiustan koolituste raames
                             teen seda ka tänaseni.
                         </p>
-                        <div class="achievement-badges">
-                            <span class="badge">Windows Server</span>
-                            <span class="badge">Networking</span>
-                            <span class="badge">Active Directory</span>
-                        </div>
                     </div>
                 </div>
                 
@@ -318,12 +264,6 @@
                             veebiarhitektuuri - HTML5, CSS3, JavaScript. Sain FreeCodeCamp 
                             Responsive Web Design sertifikaadi 300 tunni õppimise järel.
                         </p>
-                        <div class="achievement-badges">
-                            <span class="badge">Python</span>
-                            <span class="badge">HTML5/CSS3</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">FreeCodeCamp</span>
-                        </div>
                     </div>
                 </div>
                 
@@ -336,11 +276,6 @@
                             Eesmärk on luua täielik full-stack veebirakendus. Sammuti loon 
                             pidevalt väikeseid projekte.
                         </p>
-                        <div class="achievement-badges">
-                            <span class="badge">React (õppimisfaasis)</span>
-                            <span class="badge">Node.js (planeerimine)</span>
-                            <span class="badge">Full-stack</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -417,7 +352,7 @@
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">Riho Sepp</div>
+                <div class="logo" translate="no">Riho Sepp</div>
                 <p>Loon tulevikku, üks koodirida ja üks retsept korraga.</p>
             </div>
             
@@ -428,18 +363,27 @@
                 <a href="https://www.linkedin.com/in/rihosepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profiil">
                     <img src="../ikoonid/linkedin.svg" alt="LinkedIn ikoon" width="24" height="24" />
                 </a>
+                <a href="https://www.twitch.tv/stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitch kanal">
+                    <img src="../ikoonid/twitch.svg" alt="Twitch ikoon" width="24" height="24" />
+                </a>
+                <a href="https://www.youtube.com/@stepsepp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube kanal">
+                    <img src="../ikoonid/youtube.svg" alt="YouTube ikoon" width="24" height="24" />
+                </a>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Riho Sepp - Kõik õigused kaitstud</p>
+            <p>&copy; 2025 <span translate="no">Riho Sepp</span> - Kõik õigused kaitstud ❤️☕</p>
         </div>
     </footer>
 
-<div id="google_translate_element" style="display: none;"></div>
-<script src="../js/translate.js" defer></script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    
+    <!-- Google Translate Scripts -->
+    <script src="../js/translate.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- About Page JavaScript -->
     <script>
@@ -456,72 +400,50 @@
             console.log('✅ About komponendid valmis!');
         });
 
-        // Navigation functionality (same as other pages)
+        // Navigation functionality
         function initializeNavigation() {
             const navToggle = document.querySelector('.nav-toggle');
             const navLinks = document.querySelector('.nav-links');
-            const navLinksItems = document.querySelectorAll('.nav-links a');
-
-            if (!navToggle || !navLinks) return;
-
-            // Toggle mobile menu
-            navToggle.addEventListener('click', () => {
-                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                navToggle.setAttribute('aria-expanded', !isExpanded);
-                navToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-
-            // Close menu on link click
-            navLinksItems.forEach(link => {
-                link.addEventListener('click', () => {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-
-            // Close menu on outside click
-            document.addEventListener('click', (event) => {
-                const isClickInside = navToggle.contains(event.target) || navLinks.contains(event.target);
-                if (!isClickInside && navLinks.classList.contains('active')) {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                }
-            });
-
-            // Close menu on escape key
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && navLinks.classList.contains('active')) {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    navToggle.focus();
-                }
-            });
-
-            // Navbar scroll effect
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                let ticking = false;
-                
-                function updateNavbar() {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                    ticking = false;
-                }
-
-                window.addEventListener('scroll', () => {
-                    if (!ticking) {
-                        requestAnimationFrame(updateNavbar);
-                        ticking = true;
-                    }
+            
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = navLinks.classList.contains('active');
+                    
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                    navToggle.setAttribute('aria-expanded', !isOpen);
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = isOpen ? '' : 'hidden';
                 });
             }
+            
+            // Close menu on outside click
+            document.addEventListener('click', function(event) {
+                if (navLinks && navToggle) {
+                    const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+                    
+                    if (!isClickInside && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+            
+            // Close menu when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks && navToggle) {
+                        navLinks.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
         }
 
         // Initialize animations

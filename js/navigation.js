@@ -116,3 +116,90 @@ function updateNavVisibility() {
 // Käivita kohe ja window resize'il
 window.addEventListener('load', updateNavVisibility);
 window.addEventListener('resize', updateNavVisibility);
+
+// LISAGE SEE KOOD OMA index.html FAILI SCRIPTI SEKTSIOONI VÕI navigation.js FAILI
+
+// Mobiilse menüü parandus
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    
+    if (navToggle && navLinks) {
+        // Toggle menu
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isOpen = navLinks.classList.contains('active');
+            
+            if (isOpen) {
+                // Sulge menüü
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            } else {
+                // Ava menüü
+                navLinks.classList.add('active');
+                navToggle.classList.add('active');
+                navToggle.setAttribute('aria-expanded', 'true');
+                body.style.overflow = 'hidden';
+            }
+        });
+        
+        // Sulge menüü kui klikata väljaspoole
+        document.addEventListener('click', function(event) {
+            const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+            
+            if (!isClickInside && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            }
+        });
+        
+        // Sulge menüü kui klikata lingil
+        const navItems = navLinks.querySelectorAll('a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            });
+        });
+    }
+    
+    // Viewport height fix for mobile
+    function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+});
+
+// Debug funktsioon
+function debugNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    console.log('Nav Toggle found:', !!navToggle);
+    console.log('Nav Links found:', !!navLinks);
+    console.log('Nav Links classes:', navLinks ? navLinks.className : 'Not found');
+    
+    // Kontrolli z-index väärtusi
+    if (navLinks) {
+        const styles = window.getComputedStyle(navLinks);
+        console.log('Nav Links z-index:', styles.zIndex);
+        console.log('Nav Links position:', styles.position);
+        console.log('Nav Links display:', styles.display);
+    }
+}
+
+// Käivita debug 2 sekundi pärast
+setTimeout(debugNav, 2000);

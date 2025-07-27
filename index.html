@@ -9,6 +9,155 @@
     gtag('js', new Date());
     gtag('config', 'G-CPDHGQBX4K');
   </script>
+
+  <script>
+    // iOS SAFARI PARANDUSED
+// Lisage see kood oma HTML faili <script> sektsiooni
+
+document.addEventListener('DOMContentLoaded', function() {
+    // iOS detection
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isIOS) {
+        document.body.classList.add('ios-device');
+    }
+    
+    // Viewport height fix for iOS
+    const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+    
+    // Navigation fix
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    
+    if (navToggle && navLinks) {
+        // iOS touch event
+        navToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            
+            const isOpen = navLinks.classList.contains('active');
+            
+            if (!isOpen) {
+                // Ava menüü
+                navLinks.classList.add('active');
+                navToggle.classList.add('active');
+                body.classList.add('menu-open');
+                
+                // iOS scroll fix
+                if (isIOS) {
+                    body.style.position = 'fixed';
+                    body.style.width = '100%';
+                }
+            } else {
+                // Sulge menüü
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                
+                // Reset iOS scroll fix
+                if (isIOS) {
+                    body.style.position = '';
+                    body.style.width = '';
+                }
+            }
+        }, { passive: false });
+        
+        // Fallback click event
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        
+        // Close menu on link click
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                
+                if (isIOS) {
+                    body.style.position = '';
+                    body.style.width = '';
+                }
+            });
+        });
+        
+        // Close on outside tap (iOS)
+        document.addEventListener('touchstart', function(e) {
+            if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    
+                    if (isIOS) {
+                        body.style.position = '';
+                        body.style.width = '';
+                    }
+                }
+            }
+        });
+    }
+    
+    // iOS rubber band scrolling fix
+    if (isIOS) {
+        let startY = 0;
+        
+        document.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].pageY;
+        }, { passive: true });
+        
+        document.addEventListener('touchmove', function(e) {
+            const y = e.touches[0].pageY;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const height = window.innerHeight;
+            
+            // Prevent overscroll at top
+            if (scrollTop <= 0 && y > startY) {
+                e.preventDefault();
+            }
+            
+            // Prevent overscroll at bottom
+            if (scrollTop + height >= scrollHeight && y < startY) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
+});
+
+// Debug iOS
+function debugIOS() {
+    console.log('User Agent:', navigator.userAgent);
+    console.log('Window width:', window.innerWidth);
+    console.log('Window height:', window.innerHeight);
+    console.log('Device pixel ratio:', window.devicePixelRatio);
+    
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    console.log('Nav toggle found:', !!navToggle);
+    console.log('Nav links found:', !!navLinks);
+    
+    if (navLinks) {
+        const styles = window.getComputedStyle(navLinks);
+        console.log('Nav display:', styles.display);
+        console.log('Nav transform:', styles.transform);
+        console.log('Nav z-index:', styles.zIndex);
+    }
+}
+
+// Käivita debug 1 sekundi pärast
+setTimeout(debugIOS, 1000);
+  </script>
   
   <!-- Meta Information -->
   <meta charset="UTF-8" />
