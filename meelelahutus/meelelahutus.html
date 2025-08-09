@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CPDHGQBX4K');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Riho Sepa meelelahutusnurk - lõbusad mini-rakendused ja mängud">
+    <meta name="google" content="translate">
+    <meta name="google-translate-customization" content="auto">
     <title>Meelelahutus – Riho Sepp</title>
-    
-    <!-- TÄHTIS: CSS failide õige järjekord! -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/meelelahutus.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CPDHGQBX4K');
+    </script>
 </head>
 <body class="dark-theme">
 
+    <!-- NAV -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">Riho Sepp</a>
@@ -33,26 +36,30 @@
                 <li><a href="../meie.html">Meie lugu</a></li>
                 <li><a href="../raagi_kaasa.html">Räägi kaasa</a></li>
                 <li><a href="../kontakt.html">Kontakt</a></li>
+
+                <!-- Desktop keelevalik -->
+                <li role="none" id="language-buttons" class="language-selector">
+                    <button onclick="translatePage('et')" class="lang-btn active" title="Eesti keel">🇪🇪 ET</button>
+                    <button onclick="translatePage('en')" class="lang-btn" title="English">🇬🇧 EN</button>
+                    <button onclick="translatePage('fi')" class="lang-btn" title="Suomi">🇫🇮 FI</button>
+                    <button onclick="translatePage('ru')" class="lang-btn" title="Русский">🇷🇺 RU</button>
+                </li>
+
+                <!-- Mobiilne keelevalik -->
+                <li role="none" class="language-menu-mobile">
+                    <div class="mobile-lang-title">Vali keel / Choose language:</div>
+                    <div class="mobile-lang-buttons">
+                        <button onclick="translatePage('et')" class="lang-btn-mobile active">🇪🇪 Eesti</button>
+                        <button onclick="translatePage('en')" class="lang-btn-mobile">🇬🇧 English</button>
+                        <button onclick="translatePage('fi')" class="lang-btn-mobile">🇫🇮 Suomi</button>
+                        <button onclick="translatePage('ru')" class="lang-btn-mobile">🇷🇺 Русский</button>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Keelevalik -->
-    <div id="language-buttons">
-        <button onclick="translatePage('et')" aria-label="Eesti keel">
-            <img src="../lipud/ee.svg" alt="Eesti">
-        </button>
-        <button onclick="translatePage('en')" aria-label="English">
-            <img src="../lipud/gb.svg" alt="Inglise">
-        </button>
-        <button onclick="translatePage('ru')" aria-label="Русский">
-            <img src="../lipud/ru.svg" alt="Vene">
-        </button>
-        <button onclick="translatePage('fi')" aria-label="Suomi">
-            <img src="../lipud/fi.svg" alt="Soome">
-        </button>
-    </div>
-
+    <!-- SISU -->
     <header class="entertainment-hero">
         <h1>Meelelahutusnurk</h1>
         <p>Siin saad ise katsetada lõbusaid mini-rakendusi, mis on loodud Python-projektide põhjal!</p>
@@ -60,7 +67,7 @@
 
     <main>
         <section class="entertainment-section">
-            
+
             <div class="entertainment-card">
                 <h3>Proovi ise: Band Name Generator</h3>
                 <p>Loo oma bändi nimi paari klikiga.</p>
@@ -93,17 +100,17 @@
 
             <div class="entertainment-card">
                 <h3>💰 Isiklik Rahaplaan</h3>
-                <p>Desktop rakendus sinu rahaasjade haldamiseks. 
-                Jälgi oma laene, kulusid, sissetulekuid ja eelarvet. Andmed salvestatakse sinu arvutisse, privaatne ja turvaline
-                💡 „Kui Windows küsib, vajuta More info → Run anyway, see on täiesti turvaline, sest see on minu enda tehtud.“.</p>
+                <p>Desktop rakendus sinu rahaasjade haldamiseks.
+                    Jälgi oma laene, kulusid, sissetulekuid ja eelarvet. Andmed salvestatakse sinu arvutisse, privaatne ja turvaline.
+                    💡 „Kui Windows küsib, vajuta More info → Run anyway, see on täiesti turvaline, sest see on minu enda tehtud.“
+                </p>
                 <a href="../alla_laaditavad_failid/Rahaplaan Setup 1.0.0.exe" class="try-button">💾 Laadi alla</a>
-                </div>
-
-
+            </div>
 
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -113,11 +120,12 @@
         </div>
     </footer>
 
-    <!-- Google Translate element (peidetud) -->
+    <!-- Google Translate (peidetud element) -->
     <div id="google_translate_element" style="display: none;"></div>
 
-    <!-- Skriptid -->
-    <script src="../translate.js"></script>
+    <!-- SCRIPTID -->
+    <script src="../js/translate.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

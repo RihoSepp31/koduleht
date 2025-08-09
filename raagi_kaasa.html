@@ -1,109 +1,92 @@
 <!DOCTYPE html>
+
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
-    <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CPDHGQBX4K');
     </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Räägi kaasa - Riho Sepa kogukond IT, kokanduse, mängude ja muude teemade arutamiseks">
-    <title>Räägi kaasa – Riho Sepp</title>
-    <link rel="stylesheet" href="./css/raagikaasa.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Räägi kaasa - Riho Sepa kogukond IT, kokanduse, mängude ja muude teemade arutamiseks" name="description"/>
+<title>Räägi kaasa – Riho Sepp</title>
+<link href="./css/raagikaasa.css" rel="stylesheet"/>
 </head>
 <body class="dark-theme">
-
-    <nav class="navbar">
-        <div class="logo">Riho Sepp</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Avaleht</a></li>
-            <li><a href="projektid.html">Projektid</a></li>
-            <li><a href="minust/aboutme.html">Minust</a></li>
-            <li><a href="maitsetenurk/kokandus.html">Maitsete nurk</a></li>
-            <li><a href="meelelahutus/meelelahutus.html">Meelelahutus</a></li>
-            <li><a href="meie.html">Meie lugu</a></li>
-            <li><a href="#" class="active">Räägi kaasa</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div id="language-buttons">
-        <button onclick="translatePage('et')" aria-label="Eesti">
-            <img src="./lipud/ee.svg" alt="Eesti">
-        </button>
-        <button onclick="translatePage('en')" aria-label="English">
-            <img src="./lipud/gb.svg" alt="Inglise">
-        </button>
-        <button onclick="translatePage('ru')" aria-label="Русский">
-            <img src="./lipud/ru.svg" alt="Vene">
-        </button>
-        <button onclick="translatePage('fi')" aria-label="Suomi">
-            <img src="./lipud/fi.svg" alt="Soome">
-        </button>
-    </div>
-
-    <main>
-        <h1>Räägi kaasa!</h1>
-        <p>
+<nav class="navbar">
+<div class="logo">Riho Sepp</div>
+<ul class="nav-links">
+<li><a href="index.html">Avaleht</a></li>
+<li><a href="projektid.html">Projektid</a></li>
+<li><a href="minust/aboutme.html">Minust</a></li>
+<li><a href="maitsetenurk/kokandus.html">Maitsete nurk</a></li>
+<li><a href="meelelahutus/meelelahutus.html">Meelelahutus</a></li>
+<li><a href="meie.html">Meie lugu</a></li>
+<li><a class="active" href="#">Räägi kaasa</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+</nav>
+<div aria-label="Vali keel" id="language-buttons" role="group">
+<button aria-label="Eesti" class="lang-btn" onclick="translatePage('et')">ET</button>
+<button aria-label="English" class="lang-btn" onclick="translatePage('en')">EN</button>
+<button aria-label="Русский" class="lang-btn" onclick="translatePage('ru')">RU</button>
+<button aria-label="Suomi" class="lang-btn" onclick="translatePage('fi')">FI</button>
+</div><div aria-label="Vali keel (mobiil)" class="language-menu-mobile" role="group"><button aria-label="Eesti" class="lang-btn-mobile" onclick="translatePage('et')">ET</button><button aria-label="English" class="lang-btn-mobile" onclick="translatePage('en')">EN</button><button aria-label="Русский" class="lang-btn-mobile" onclick="translatePage('ru')">RU</button><button aria-label="Suomi" class="lang-btn-mobile" onclick="translatePage('fi')">FI</button></div>
+<main>
+<h1>Räägi kaasa!</h1>
+<p>
             Tere tulemast meie kogukonda! Vali teema, mis sind huvitab, ja jaga oma mõtteid, 
             kogemusi või küsi nõu. Siin on ruumi igale ideele ja arvamusele.
         </p>
-
-        <!-- Teemanupud -->
-        <div class="topic-buttons">
-            <a href="?teema=kokandus" class="topic-btn" data-topic="kokandus">
-                <span style="font-size: 3rem; margin-bottom: 1rem;">🍳</span>
-                <span>Kokandus</span>
-                <span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+<!-- Teemanupud -->
+<div class="topic-buttons">
+<a class="topic-btn" data-topic="kokandus" href="?teema=kokandus">
+<span style="font-size: 3rem; margin-bottom: 1rem;">🍳</span>
+<span>Kokandus</span>
+<span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
                     Retseptid, nipid ja trikid
                 </span>
-            </a>
-            <a href="?teema=it" class="topic-btn" data-topic="it">
-                <span style="font-size: 3rem; margin-bottom: 1rem;">🖥️</span>
-                <span>IT & Tehnoloogia</span>
-                <span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+</a>
+<a class="topic-btn" data-topic="it" href="?teema=it">
+<span style="font-size: 3rem; margin-bottom: 1rem;">🖥️</span>
+<span>IT &amp; Tehnoloogia</span>
+<span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
                     Programmeerimine ja uudised
                 </span>
-            </a>
-            <a href="?teema=mangud" class="topic-btn" data-topic="mangud">
-                <span style="font-size: 3rem; margin-bottom: 1rem;">🎮</span>
-                <span>Mängud</span>
-                <span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+</a>
+<a class="topic-btn" data-topic="mangud" href="?teema=mangud">
+<span style="font-size: 3rem; margin-bottom: 1rem;">🎮</span>
+<span>Mängud</span>
+<span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
                     Gaming ja e-sport
                 </span>
-            </a>
-            <a href="?teema=muu" class="topic-btn" data-topic="muu">
-                <span style="font-size: 3rem; margin-bottom: 1rem;">🌿</span>
-                <span>Muud teemad</span>
-                <span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+</a>
+<a class="topic-btn" data-topic="muu" href="?teema=muu">
+<span style="font-size: 3rem; margin-bottom: 1rem;">🌿</span>
+<span>Muud teemad</span>
+<span style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
                     Kõik muu põnev
                 </span>
-            </a>
-        </div>
-
-        <!-- Loading indicator -->
-        <div id="loading" class="loading" style="display: none;">
+</a>
+</div>
+<!-- Loading indicator -->
+<div class="loading" id="loading" style="display: none;">
             Laadin kommentaare...
         </div>
-
-        <!-- Disqus kommentaari kast -->
-        <div class="disqus-box">
-            <div id="disqus_thread"></div>
-        </div>
-    </main>
-
-    <!-- Google Translate element (peidetud) -->
-    <div id="google_translate_element" style="display: none;"></div>
-
-    <!-- Scripts -->
-    <script src="translate.js"></script>
-
-    <script>
+<!-- Disqus kommentaari kast -->
+<div class="disqus-box">
+<div id="disqus_thread"></div>
+</div>
+</main>
+<!-- Google Translate element (peidetud) -->
+<div id="google_translate_element" style="display: none;"></div>
+<!-- Scripts -->
+<script src="./js/translate.js"></script>
+<script>
         // Get current topic from URL
         const params = new URLSearchParams(window.location.search);
         const topic = params.get('teema') || 'ylemine';
@@ -170,8 +153,7 @@
             });
         });
     </script>
-
-    <style>
+<style>
         @keyframes ripple {
             to {
                 width: 200px;
@@ -180,12 +162,10 @@
             }
         }
     </style>
-
-    <noscript>
-        <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+<noscript>
+<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
             Palun luba JavaScript, et näha <a href="https://disqus.com/?ref_noscript" style="color: var(--accent-primary);">kommentaare</a>.
         </div>
-    </noscript>
-
-</body>
+</noscript>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></body>
 </html>

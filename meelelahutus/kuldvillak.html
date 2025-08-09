@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,229 +11,329 @@
 
   gtag('config', 'G-CPDHGQBX4K');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kuldvillak</title>
-  <link rel="stylesheet" href="../css/kuldvillak_style.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kuldvillak</title>
+<link href="../css/kuldvillak_style.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Keelevalik -->
-  <div id="language-buttons">
-    <button onclick="translatePage('et')" class="active" aria-label="Eesti"><img src="../lipud/ee.svg" alt="Eesti"></button>
-    <button onclick="translatePage('en')" aria-label="Inglise"><img src="../lipud/gb.svg" alt="Inglise"></button>
-    <button onclick="translatePage('fi')" aria-label="Soome"><img src="../lipud/fi.svg" alt="Soome"></button>
-  </div>
+<!-- Keelevalik -->
+<div id="language-buttons"><button aria-label="et" class="lang-btn" onclick="translatePage('et')">ET</button><button aria-label="en" class="lang-btn" onclick="translatePage('en')">EN</button><button aria-label="fi" class="lang-btn" onclick="translatePage('fi')">FI</button></div><div aria-label="Vali keel (mobiil)" class="language-menu-mobile" role="group"><button aria-label="et" class="lang-btn-mobile" onclick="translatePage('et')">ET</button><button aria-label="en" class="lang-btn-mobile" onclick="translatePage('en')">EN</button><button aria-label="fi" class="lang-btn-mobile" onclick="translatePage('fi')">FI</button></div>
+<h1 data-i18n="mainTitle" id="mainTitle">Kuldvillak</h1>
+<!-- Kogu mängu seadistamine - ainult moderaatorile nähtav -->
+<section id="setupSection">
+<div class="moderator-warning">
+<h3 data-i18n="moderatorTitle" id="moderatorTitle">⚠️ MODERAATORI VAADE</h3>
+<p data-i18n="moderatorWarning" id="moderatorWarning">See vaade on ainult moderaatorile! Teised mängijad ei tohi siia vaadata.</p>
+</div>
+<div id="teamSection">
+<h2 data-i18n="teamsTitle" id="teamsTitle">Tiimid</h2>
+<input data-i18n-placeholder="teamNamePlaceholder" id="team1" placeholder="Tiim 1 nimi" type="text"/>
+<input data-i18n-placeholder="teamNamePlaceholder" id="team2" placeholder="Tiim 2 nimi" type="text"/>
+<input data-i18n-placeholder="teamNamePlaceholder" id="team3" placeholder="Tiim 3 nimi" type="text"/>
+<input data-i18n-placeholder="teamNamePlaceholder" id="team4" placeholder="Tiim 4 nimi" type="text"/>
+</div>
+<div>
+<h2 data-i18n="categoriesTitle" id="categoriesTitle">Kategooriad ja küsimused</h2>
+<!-- Kategooria 1 -->
+<div class="categoryInput">
+<input data-i18n-placeholder="categoryPlaceholder" data-translate="categoryPlaceholder" id="category1" placeholder="Kategooria 1 nimi" type="text"/>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q1-1" placeholder="Küsimus 1 (100€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a1-1" placeholder="Vastus 1" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q1-2" placeholder="Küsimus 2 (200€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a1-2" placeholder="Vastus 2" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q1-3" placeholder="Küsimus 3 (300€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a1-3" placeholder="Vastus 3" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q1-4" placeholder="Küsimus 4 (400€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a1-4" placeholder="Vastus 4" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q1-5" placeholder="Küsimus 5 (500€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a1-5" placeholder="Vastus 5" type="text"/>
+</div>
+</div>
+<!-- Kategooria 2 -->
+<div class="categoryInput">
+<input data-i18n-placeholder="categoryPlaceholder" data-translate="categoryPlaceholder" id="category2" placeholder="Kategooria 2 nimi" type="text"/>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q2-1" placeholder="Küsimus 1 (100€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a2-1" placeholder="Vastus 1" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q2-2" placeholder="Küsimus 2 (200€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a2-2" placeholder="Vastus 2" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q2-3" placeholder="Küsimus 3 (300€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a2-3" placeholder="Vastus 3" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q2-4" placeholder="Küsimus 4 (400€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a2-4" placeholder="Vastus 4" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q2-5" placeholder="Küsimus 5 (500€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a2-5" placeholder="Vastus 5" type="text"/>
+</div>
+</div>
+<!-- Kategooria 3 -->
+<div class="categoryInput">
+<input data-i18n-placeholder="categoryPlaceholder" data-translate="categoryPlaceholder" id="category3" placeholder="Kategooria 3 nimi" type="text"/>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q3-1" placeholder="Küsimus 1 (100€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a3-1" placeholder="Vastus 1" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q3-2" placeholder="Küsimus 2 (200€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a3-2" placeholder="Vastus 2" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q3-3" placeholder="Küsimus 3 (300€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a3-3" placeholder="Vastus 3" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q3-4" placeholder="Küsimus 4 (400€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a3-4" placeholder="Vastus 4" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q3-5" placeholder="Küsimus 5 (500€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a3-5" placeholder="Vastus 5" type="text"/>
+</div>
+</div>
+<!-- Kategooria 4 -->
+<div class="categoryInput">
+<input data-i18n-placeholder="categoryPlaceholder" data-translate="categoryPlaceholder" id="category4" placeholder="Kategooria 4 nimi" type="text"/>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q4-1" placeholder="Küsimus 1 (100€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a4-1" placeholder="Vastus 1" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q4-2" placeholder="Küsimus 2 (200€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a4-2" placeholder="Vastus 2" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q4-3" placeholder="Küsimus 3 (300€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a4-3" placeholder="Vastus 3" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q4-4" placeholder="Küsimus 4 (400€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a4-4" placeholder="Vastus 4" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q4-5" placeholder="Küsimus 5 (500€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a4-5" placeholder="Vastus 5" type="text"/>
+</div>
+</div>
+<!-- Kategooria 5 -->
+<div class="categoryInput">
+<input data-i18n-placeholder="categoryPlaceholder" data-translate="categoryPlaceholder" id="category5" placeholder="Kategooria 5 nimi" type="text"/>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q5-1" placeholder="Küsimus 1 (100€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a5-1" placeholder="Vastus 1" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q5-2" placeholder="Küsimus 2 (200€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a5-2" placeholder="Vastus 2" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q5-3" placeholder="Küsimus 3 (300€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a5-3" placeholder="Vastus 3" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q5-4" placeholder="Küsimus 4 (400€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a5-4" placeholder="Vastus 4" type="text"/>
+</div>
+<div class="qaGroup">
+<input data-i18n-placeholder="questionPlaceholder" data-translate="questionPlaceholder" id="q5-5" placeholder="Küsimus 5 (500€)" type="text"/>
+<input data-i18n-placeholder="answerPlaceholder" data-translate="answerPlaceholder" id="a5-5" placeholder="Vastus 5" type="text"/>
+</div>
+</div>
+<h3 data-i18n="finalQuestionTitle" id="finalQuestionTitle" style="color: gold;">Finaalküsimus</h3>
+<input data-i18n-placeholder="finalQuestionInput" id="finalQuestionInput" placeholder="Finaalküsimus" type="text"/>
+<input data-i18n-placeholder="finalAnswerInput" id="finalAnswerInput" placeholder="Õige vastus" type="text"/>
+</div>
+<button data-i18n="loadTestQuestionsBtn" id="loadTestQuestionsBtn" onclick="loadQuestionsFromJSON()">Lae testküsimused</button>
+<button data-i18n="showRulesBtn" id="showRulesBtn">Näita mängureegleid</button>
+</section>
+<!-- Mängureeglid - avalik vaade -->
+<section class="hidden" id="rulesSection">
+<div class="rules-container">
+<h2 id="rulesTitle">🎮 Mängureeglid</h2>
+<div class="rules-content" id="rulesContent">
+<!-- Reeglid lisatakse JavaScriptiga vastavalt keelele -->
+</div>
+<button data-i18n="startGameBtn" id="startGameBtn">Alusta mängu</button>
+</div>
+</section>
+<section id="gameBoard" style="display: none;"></section>
+<section id="scoreDisplay"></section>
+<!-- Küsimuse modaal -->
+<div class="modal hidden" id="questionModal">
+<p id="timerDisplay">Aeg: 10</p>
+<div class="modal-content">
+<h2 id="modalCategory"></h2>
+<p id="modalQuestion"></p>
+<div id="modalTeams"></div>
+<p class="hidden" id="modalAnswer"></p>
+<button data-i18n="showAnswerBtn" id="showAnswerBtn">Näita vastust</button>
+<button data-i18n="correctBtn" id="correctBtn" style="display: none;">Õige</button>
+<button data-i18n="wrongBtn" id="wrongBtn" style="display: none;">Vale</button>
+<button data-i18n="noAnswerBtn" id="noAnswerBtn" style="display: none;">Keegi ei vastanud</button>
+<button data-i18n="closeModalBtn" id="closeModalBtn">Sulge</button>
+</div>
+</div>
+<!-- Finaalvoor -->
+<section class="hidden" id="finalSection"></section>
+<!-- Võitja kuvamine -->
+<div id="winnerDisplay"></div>
+<!-- Google Translate element (peidetud) -->
+<div id="google_translate_element" style="display: none;"></div>
+<!-- Heli elemendid -->
+<audio id="correctSound" preload="auto">
+<source src="../rightanswer.mp3" type="audio/wav"/>
+<source src="../rightanswer.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="wrongSound" preload="auto">
+<source src="../times-up.mp3" type="audio/wav"/>
+<source src="../times-up.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="finalMusic" preload="auto">
+<source src="../jeopardy-themelq.mp3" type="audio/mpeg"/>
+<source src="../jeopardy-themelq.mp3" type="audio/wav"/>
+</audio>
+<!-- Skriptid -->
+<script src="../translate.js"></script>
+<script src="../js/kuldvillak.js"></script>
+<script>
+// Kuldvillak i18n injected
+(function(){ 
+  const dict = {
+    et: {
+      mainTitle: "Kuldvillak",
+      moderatorTitle: "⚠️ MODERAATORI VAADE",
+      moderatorWarning: "See vaade on ainult moderaatorile! Teised mängijad ei tohi siia vaadata.",
+      teamsTitle: "Tiimid",
+      categoriesTitle: "Kategooriad ja küsimused",
+      finalQuestionTitle: "Finaalküsimus",
+      loadTestQuestionsBtn: "Lae testküsimused",
+      showRulesBtn: "Näita mängureegleid",
+      startGameBtn: "Alusta mängu",
+      showAnswerBtn: "Näita vastust",
+      correctBtn: "Õige",
+      wrongBtn: "Vale",
+      noAnswerBtn: "Keegi ei vastanud",
+      closeModalBtn: "Sulge",
+      teamNamePlaceholder: "Tiim {n} nimi",
+      categoryPlaceholder: "Kategooria {n} nimi",
+      questionPlaceholder: "Küsimus {i} ({v}€)",
+      answerPlaceholder: "Vastus {i}",
+      finalQuestionInput: "Finaalküsimus",
+      finalAnswerInput: "Õige vastus"
+    },
+    en: {
+      mainTitle: "Jeopardy",
+      moderatorTitle: "⚠️ MODERATOR VIEW",
+      moderatorWarning: "This view is for the moderator only! Other players should not look here.",
+      teamsTitle: "Teams",
+      categoriesTitle: "Categories and questions",
+      finalQuestionTitle: "Final question",
+      loadTestQuestionsBtn: "Load test questions",
+      showRulesBtn: "Show game rules",
+      startGameBtn: "Start game",
+      showAnswerBtn: "Show answer",
+      correctBtn: "Correct",
+      wrongBtn: "Wrong",
+      noAnswerBtn: "No answer",
+      closeModalBtn: "Close",
+      teamNamePlaceholder: "Team {n} name",
+      categoryPlaceholder: "Category {n} name",
+      questionPlaceholder: "Question {i} ({v}€)",
+      answerPlaceholder: "Answer {i}",
+      finalQuestionInput: "Final question",
+      finalAnswerInput: "Correct answer"
+    },
+    fi: {
+      mainTitle: "Jeopardy",
+      moderatorTitle: "⚠️ MODERAATTORIN NÄKYMÄ",
+      moderatorWarning: "Tämä näkymä on vain moderaattorille! Muiden pelaajien ei tule katsoa tänne.",
+      teamsTitle: "Joukkueet",
+      categoriesTitle: "Luokat ja kysymykset",
+      finalQuestionTitle: "Finaalikysymys",
+      loadTestQuestionsBtn: "Lataa testikysymykset",
+      showRulesBtn: "Näytä pelisäännöt",
+      startGameBtn: "Aloita peli",
+      showAnswerBtn: "Näytä vastaus",
+      correctBtn: "Oikein",
+      wrongBtn: "Väärin",
+      noAnswerBtn: "Ei vastausta",
+      closeModalBtn: "Sulje",
+      teamNamePlaceholder: "Joukkueen {n} nimi",
+      categoryPlaceholder: "Luokan {n} nimi",
+      questionPlaceholder: "Kysymys {i} ({v}€)",
+      answerPlaceholder: "Vastaus {i}",
+      finalQuestionInput: "Finaalikysymys",
+      finalAnswerInput: "Oikea vastaus"
+    }
+  };
 
-  <h1 id="mainTitle">Kuldvillak</h1>
+  function t(lang, key, params) {
+    let s = (dict[lang] && dict[lang][key]) || (dict.et && dict.et[key]) || "";
+    if (!params) return s;
+    return s.replace(/\{(\w+)\}/g, (_, k) => params[k] ?? "");
+  }
 
-  <!-- Kogu mängu seadistamine - ainult moderaatorile nähtav -->
-  <section id="setupSection">
-    <div class="moderator-warning">
-      <h3 id="moderatorTitle">⚠️ MODERAATORI VAADE</h3>
-      <p id="moderatorWarning">See vaade on ainult moderaatorile! Teised mängijad ei tohi siia vaadata.</p>
-    </div>
+  function applyTranslations(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (!key) return;
+      el.textContent = t(lang, key);
+    });
+    // Team inputs
+    for (let n=1; n<=4; n++) {
+      const el = document.getElementById("team"+n);
+      if (el) el.placeholder = t(lang, "teamNamePlaceholder", {n});
+    }
+    // Category & Q/A placeholders
+    for (let c=1; c<=5; c++) {
+      const cat = document.getElementById("category"+c);
+      if (cat) cat.placeholder = t(lang, "categoryPlaceholder", {n:c});
+      const values = [100,200,300,400,500];
+      for (let i=1; i<=5; i++) {
+        const q = document.getElementById(`q${c}-${i}`);
+        const a = document.getElementById(`a${c}-${i}`);
+        if (q) q.placeholder = t(lang, "questionPlaceholder", {i, v: values[i-1]});
+        if (a) a.placeholder = t(lang, "answerPlaceholder", {i});
+      }
+    }
+    // Final inputs
+    const fq = document.getElementById("finalQuestionInput");
+    if (fq) fq.placeholder = t(lang, "finalQuestionInput");
+    const fa = document.getElementById("finalAnswerInput");
+    if (fa) fa.placeholder = t(lang, "finalAnswerInput");
 
-    <div id="teamSection">
-      <h2 id="teamsTitle">Tiimid</h2>
-      <input type="text" id="team1" placeholder="Tiim 1 nimi" />
-      <input type="text" id="team2" placeholder="Tiim 2 nimi" />
-      <input type="text" id="team3" placeholder="Tiim 3 nimi" />
-      <input type="text" id="team4" placeholder="Tiim 4 nimi" />
-    </div>
+    // Active state on buttons
+    document.querySelectorAll('.lang-btn, .lang-btn-mobile').forEach(b=>{
+      const on = (b.getAttribute('onclick')||'').includes("'" + lang + "'");
+      b.classList.toggle('active', on);
+    });
+  }
 
-    <div>
-      <h2 id="categoriesTitle">Kategooriad ja küsimused</h2>
-      
-      <!-- Kategooria 1 -->
-      <div class="categoryInput">
-        <input type="text" id="category1" data-translate="categoryPlaceholder" placeholder="Kategooria 1 nimi" />
-        <div class="qaGroup">
-          <input type="text" id="q1-1" data-translate="questionPlaceholder" placeholder="Küsimus 1 (100€)" />
-          <input type="text" id="a1-1" data-translate="answerPlaceholder" placeholder="Vastus 1" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q1-2" data-translate="questionPlaceholder" placeholder="Küsimus 2 (200€)" />
-          <input type="text" id="a1-2" data-translate="answerPlaceholder" placeholder="Vastus 2" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q1-3" data-translate="questionPlaceholder" placeholder="Küsimus 3 (300€)" />
-          <input type="text" id="a1-3" data-translate="answerPlaceholder" placeholder="Vastus 3" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q1-4" data-translate="questionPlaceholder" placeholder="Küsimus 4 (400€)" />
-          <input type="text" id="a1-4" data-translate="answerPlaceholder" placeholder="Vastus 4" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q1-5" data-translate="questionPlaceholder" placeholder="Küsimus 5 (500€)" />
-          <input type="text" id="a1-5" data-translate="answerPlaceholder" placeholder="Vastus 5" />
-        </div>
-      </div>
+  const orig = window.translatePage;
+  window.translatePage = function(lang) {
+    try { localStorage.setItem('siteLang', lang); } catch(e){}
+    applyTranslations(lang);
+    if (typeof orig === 'function') return orig(lang);
+  };
 
-      <!-- Kategooria 2 -->
-      <div class="categoryInput">
-        <input type="text" id="category2" data-translate="categoryPlaceholder" placeholder="Kategooria 2 nimi" />
-        <div class="qaGroup">
-          <input type="text" id="q2-1" data-translate="questionPlaceholder" placeholder="Küsimus 1 (100€)" />
-          <input type="text" id="a2-1" data-translate="answerPlaceholder" placeholder="Vastus 1" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q2-2" data-translate="questionPlaceholder" placeholder="Küsimus 2 (200€)" />
-          <input type="text" id="a2-2" data-translate="answerPlaceholder" placeholder="Vastus 2" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q2-3" data-translate="questionPlaceholder" placeholder="Küsimus 3 (300€)" />
-          <input type="text" id="a2-3" data-translate="answerPlaceholder" placeholder="Vastus 3" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q2-4" data-translate="questionPlaceholder" placeholder="Küsimus 4 (400€)" />
-          <input type="text" id="a2-4" data-translate="answerPlaceholder" placeholder="Vastus 4" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q2-5" data-translate="questionPlaceholder" placeholder="Küsimus 5 (500€)" />
-          <input type="text" id="a2-5" data-translate="answerPlaceholder" placeholder="Vastus 5" />
-        </div>
-      </div>
-
-      <!-- Kategooria 3 -->
-      <div class="categoryInput">
-        <input type="text" id="category3" data-translate="categoryPlaceholder" placeholder="Kategooria 3 nimi" />
-        <div class="qaGroup">
-          <input type="text" id="q3-1" data-translate="questionPlaceholder" placeholder="Küsimus 1 (100€)" />
-          <input type="text" id="a3-1" data-translate="answerPlaceholder" placeholder="Vastus 1" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q3-2" data-translate="questionPlaceholder" placeholder="Küsimus 2 (200€)" />
-          <input type="text" id="a3-2" data-translate="answerPlaceholder" placeholder="Vastus 2" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q3-3" data-translate="questionPlaceholder" placeholder="Küsimus 3 (300€)" />
-          <input type="text" id="a3-3" data-translate="answerPlaceholder" placeholder="Vastus 3" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q3-4" data-translate="questionPlaceholder" placeholder="Küsimus 4 (400€)" />
-          <input type="text" id="a3-4" data-translate="answerPlaceholder" placeholder="Vastus 4" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q3-5" data-translate="questionPlaceholder" placeholder="Küsimus 5 (500€)" />
-          <input type="text" id="a3-5" data-translate="answerPlaceholder" placeholder="Vastus 5" />
-        </div>
-      </div>
-
-      <!-- Kategooria 4 -->
-      <div class="categoryInput">
-        <input type="text" id="category4" data-translate="categoryPlaceholder" placeholder="Kategooria 4 nimi" />
-        <div class="qaGroup">
-          <input type="text" id="q4-1" data-translate="questionPlaceholder" placeholder="Küsimus 1 (100€)" />
-          <input type="text" id="a4-1" data-translate="answerPlaceholder" placeholder="Vastus 1" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q4-2" data-translate="questionPlaceholder" placeholder="Küsimus 2 (200€)" />
-          <input type="text" id="a4-2" data-translate="answerPlaceholder" placeholder="Vastus 2" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q4-3" data-translate="questionPlaceholder" placeholder="Küsimus 3 (300€)" />
-          <input type="text" id="a4-3" data-translate="answerPlaceholder" placeholder="Vastus 3" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q4-4" data-translate="questionPlaceholder" placeholder="Küsimus 4 (400€)" />
-          <input type="text" id="a4-4" data-translate="answerPlaceholder" placeholder="Vastus 4" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q4-5" data-translate="questionPlaceholder" placeholder="Küsimus 5 (500€)" />
-          <input type="text" id="a4-5" data-translate="answerPlaceholder" placeholder="Vastus 5" />
-        </div>
-      </div>
-
-      <!-- Kategooria 5 -->
-      <div class="categoryInput">
-        <input type="text" id="category5" data-translate="categoryPlaceholder" placeholder="Kategooria 5 nimi" />
-        <div class="qaGroup">
-          <input type="text" id="q5-1" data-translate="questionPlaceholder" placeholder="Küsimus 1 (100€)" />
-          <input type="text" id="a5-1" data-translate="answerPlaceholder" placeholder="Vastus 1" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q5-2" data-translate="questionPlaceholder" placeholder="Küsimus 2 (200€)" />
-          <input type="text" id="a5-2" data-translate="answerPlaceholder" placeholder="Vastus 2" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q5-3" data-translate="questionPlaceholder" placeholder="Küsimus 3 (300€)" />
-          <input type="text" id="a5-3" data-translate="answerPlaceholder" placeholder="Vastus 3" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q5-4" data-translate="questionPlaceholder" placeholder="Küsimus 4 (400€)" />
-          <input type="text" id="a5-4" data-translate="answerPlaceholder" placeholder="Vastus 4" />
-        </div>
-        <div class="qaGroup">
-          <input type="text" id="q5-5" data-translate="questionPlaceholder" placeholder="Küsimus 5 (500€)" />
-          <input type="text" id="a5-5" data-translate="answerPlaceholder" placeholder="Vastus 5" />
-        </div>
-      </div>
-
-      <h3 style="color: gold;" id="finalQuestionTitle">Finaalküsimus</h3>
-      <input type="text" id="finalQuestionInput" placeholder="Finaalküsimus" />
-      <input type="text" id="finalAnswerInput" placeholder="Õige vastus" />
-    </div>
-
-    <button id="loadTestQuestionsBtn" onclick="loadQuestionsFromJSON()">Lae testküsimused</button>
-    <button id="showRulesBtn">Näita mängureegleid</button>
-  </section>
-
-  <!-- Mängureeglid - avalik vaade -->
-  <section id="rulesSection" class="hidden">
-    <div class="rules-container">
-      <h2 id="rulesTitle">🎮 Mängureeglid</h2>
-      <div class="rules-content" id="rulesContent">
-        <!-- Reeglid lisatakse JavaScriptiga vastavalt keelele -->
-      </div>
-      <button id="startGameBtn">Alusta mängu</button>
-    </div>
-  </section>
-
-  <section id="gameBoard" style="display: none;"></section>
-
-  <section id="scoreDisplay"></section>
-
-  <!-- Küsimuse modaal -->
-  <div id="questionModal" class="modal hidden">
-    <p id="timerDisplay">Aeg: 10</p>
-    <div class="modal-content">
-      <h2 id="modalCategory"></h2>
-      <p id="modalQuestion"></p>
-      <div id="modalTeams"></div>
-      <p id="modalAnswer" class="hidden"></p>
-      <button id="showAnswerBtn">Näita vastust</button>
-      <button id="correctBtn" style="display: none;">Õige</button>
-      <button id="wrongBtn" style="display: none;">Vale</button>
-      <button id="noAnswerBtn" style="display: none;">Keegi ei vastanud</button>
-      <button id="closeModalBtn">Sulge</button>
-    </div>
-  </div>
-
-  <!-- Finaalvoor -->
-  <section id="finalSection" class="hidden"></section>
-
-  <!-- Võitja kuvamine -->
-  <div id="winnerDisplay"></div>
-
-  <!-- Google Translate element (peidetud) -->
-  <div id="google_translate_element" style="display: none;"></div>
-
-  <!-- Heli elemendid -->
-  <audio id="correctSound" preload="auto">
-    <source src="../rightanswer.mp3" type="audio/wav">
-    <source src="../rightanswer.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="wrongSound" preload="auto">
-    <source src="../times-up.mp3" type="audio/wav">
-    <source src="../times-up.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="finalMusic" preload="auto">
-    <source src="../jeopardy-themelq.mp3" type="audio/mpeg">
-    <source src="../jeopardy-themelq.mp3" type="audio/wav">
-  </audio>
-
-  <!-- Skriptid -->
-  <script src="../translate.js"></script>
-  <script src="../js/kuldvillak.js"></script>
-</body>
+  const saved = (function(){ try { return localStorage.getItem('siteLang'); } catch(e){ return null; } })();
+  applyTranslations(saved || 'et');
+})();
+</script></body>
 </html>

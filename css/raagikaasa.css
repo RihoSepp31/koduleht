@@ -569,3 +569,149 @@ a:focus-visible {
     box-shadow: none;
   }
 }
+
+/* === Language menus: responsive visibility === */
+.language-menu-mobile { 
+  display: none; 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-card);
+  z-index: 1001;
+  gap: 8px;
+}
+
+.language-menu-mobile button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-menu-mobile button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.1);
+}
+
+.language-menu-mobile img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.lang-btn.active, .lang-btn-mobile.active {
+  background: rgba(0, 255, 136, 0.12) !important;
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.25) inset;
+  border-radius: 10px;
+}
+
+/* Only one menu visible on small screens */
+@media (max-width: 768px) {
+  #language-buttons { display: none; }
+  .language-menu-mobile { display: flex; }
+}
+
+
+/* === Language menus (text buttons, no flag images) === */
+#language-buttons button,
+.language-menu-mobile button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform .2s ease, background .2s ease;
+}
+
+#language-buttons button:hover,
+.language-menu-mobile button:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+}
+
+.language-menu-mobile { 
+  display: none; 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  z-index: 1001;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  #language-buttons { display: none; }
+  .language-menu-mobile { display: flex; }
+}
+
+/* Hard-hide Google UI if it flashes */
+#google_translate_element,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+.goog-te-banner-frame,
+.goog-logo-link {
+  display: none !important;
+}
+
+
+/* === High-contrast language buttons === */
+#language-buttons button,
+.language-menu-mobile button {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+#language-buttons button:hover,
+.language-menu-mobile button:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+#language-buttons button:focus-visible,
+.language-menu-mobile button:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.9);
+  outline-offset: 2px;
+}
+
+/* Active language more visible */
+.lang-btn.active, .lang-btn-mobile.active {
+  background: rgba(255, 255, 255, 0.32) !important;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.65) inset, 0 2px 10px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.8) !important;
+}
+
+/* Optional: subtle container styling to lift from background */
+#language-buttons, .language-menu-mobile {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

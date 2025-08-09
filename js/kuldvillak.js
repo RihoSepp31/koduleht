@@ -924,8 +924,8 @@ function showRules() {
           </li>
           <li><strong>Näide 3:</strong> 
             <ul style="margin-left: 20px;">
-              <li><em>Ekraanil:</em> "Eesti endine president"</li>
-              <li><em>Õige vastus:</em> <strong>"Kes on Lennart Meri?"</strong></li>
+              <li><em>Ekraanil:</em> "Eesti president"</li>
+              <li><em>Õige vastus:</em> <strong>"Kes on Alar Karis?"</strong></li>
             </ul>
           </li>
         </ul>

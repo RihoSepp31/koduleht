@@ -1,21 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
-    <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CPDHGQBX4K');
     </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Võta ühendust - Riho Sepp">
-    <title>Kontakt | Riho Sepp</title>
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Võta ühendust - Riho Sepp" name="description"/>
+<title>Kontakt | Riho Sepp</title>
+<style>
         /* Import fonts */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -486,72 +485,123 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-    </style>
-</head>
-<body>
-    <div class="back-link">
-        <a href="index.html">Tagasi avalehele</a>
-    </div>
+    
 
-    <div class="container">
-        <div class="title-section">
-            <h1>Võta minuga ühendust</h1>
-            <p class="subtitle">
+/* === Language menus (text buttons, high contrast) === */
+#language-buttons button,
+.language-menu-mobile button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.38);
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+#language-buttons button:hover,
+.language-menu-mobile button:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.55);
+  transform: translateY(-1px);
+}
+
+.lang-btn.active, .lang-btn-mobile.active {
+  background: rgba(255, 255, 255, 0.32) !important;
+  border-color: rgba(255,255,255,0.8) !important;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.65) inset, 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Mobile menu container */
+.language-menu-mobile { 
+  display: none; 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-card);
+  z-index: 1001;
+  gap: 8px;
+}
+
+/* Show only one menu based on width */
+@media (max-width: 768px) {
+  #language-buttons { display: none; }
+  .language-menu-mobile { display: flex; }
+}
+
+/* Hard-hide Google UI flashes */
+#google_translate_element,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+.goog-te-banner-frame,
+.goog-logo-link { display: none !important; }
+</style>
+</head>
+<body><div id="language-buttons"><button aria-label="et" class="lang-btn" onclick="translatePage('et')">ET</button><button aria-label="en" class="lang-btn" onclick="translatePage('en')">EN</button><button aria-label="ru" class="lang-btn" onclick="translatePage('ru')">RU</button><button aria-label="fi" class="lang-btn" onclick="translatePage('fi')">FI</button></div><div aria-label="Vali keel (mobiil)" class="language-menu-mobile" role="group"><button aria-label="et" class="lang-btn-mobile" onclick="translatePage('et')">ET</button><button aria-label="en" class="lang-btn-mobile" onclick="translatePage('en')">EN</button><button aria-label="ru" class="lang-btn-mobile" onclick="translatePage('ru')">RU</button><button aria-label="fi" class="lang-btn-mobile" onclick="translatePage('fi')">FI</button></div>
+<div class="back-link">
+<a href="index.html">Tagasi avalehele</a>
+</div>
+<div class="container">
+<div class="title-section">
+<h1>Võta minuga ühendust</h1>
+<p class="subtitle">
                 Kas sul on küsimus, ettepanek või soovid lihtsalt tere öelda? 
                 Kirjuta mulle ja vastan esimesel võimalusel!
             </p>
-
-            <div class="contact-info">
-                <div class="info-card">
-                    <span class="info-icon">📧</span>
-                    <div class="info-content">
-                        <h3>E-post</h3>
-                        <p>riho.sepp@outlook.com</p>
-                    </div>
-                </div>
-               
-                </div>
-                <div class="info-card">
-                    <span class="info-icon">⏱️</span>
-                    <div class="info-content">
-                        <h3>Vastamise aeg</h3>
-                        <p>24-48 tundi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <form action="https://formspree.io/f/xeokjrpq" method="POST" id="contact-form">
-            <label for="fname">Eesnimi</label>
-            <input type="text" id="fname" name="Eesnimi" required>
-
-            <label for="lname">Perekonnanimi</label>
-            <input type="text" id="lname" name="Perekonnanimi" required>
-
-            <label for="email">E-posti aadress</label>
-            <input type="email" id="email" name="E-post" required>
-
-            <label for="subject">Teema</label>
-            <input type="text" id="subject" name="Teema" required>
-
-            <label for="message">Sõnum</label>
-            <textarea id="message" name="Sõnum" rows="6" required></textarea>
-
-            <button type="submit">Saada sõnum</button>
-            
-            <div class="success-message" id="success-message">
+<div class="contact-info">
+<div class="info-card">
+<span class="info-icon">📧</span>
+<div class="info-content">
+<h3>E-post</h3>
+<p>riho.sepp@outlook.com</p>
+</div>
+</div>
+</div>
+<div class="info-card">
+<span class="info-icon">⏱️</span>
+<div class="info-content">
+<h3>Vastamise aeg</h3>
+<p>24-48 tundi</p>
+</div>
+</div>
+</div>
+</div>
+<form action="https://formspree.io/f/xeokjrpq" id="contact-form" method="POST">
+<label for="fname">Eesnimi</label>
+<input id="fname" name="Eesnimi" required="" type="text"/>
+<label for="lname">Perekonnanimi</label>
+<input id="lname" name="Perekonnanimi" required="" type="text"/>
+<label for="email">E-posti aadress</label>
+<input id="email" name="E-post" required="" type="email"/>
+<label for="subject">Teema</label>
+<input id="subject" name="Teema" required="" type="text"/>
+<label for="message">Sõnum</label>
+<textarea id="message" name="Sõnum" required="" rows="6"></textarea>
+<button type="submit">Saada sõnum</button>
+<div class="success-message" id="success-message">
                 ✅ Sõnum saadetud! Tänan, et võtsid ühendust.
             </div>
-        </form>
-    </div>
+</form>
 
-    <!-- Google Translate element (peidetud) -->
-    <div id="google_translate_element" style="display: none;"></div>
-
-    <!-- Scripts -->
-    <script src="translate.js"></script>
-
-    <script>
+<!-- Google Translate element (peidetud) -->
+<div id="google_translate_element" style="display: none;"></div>
+<!-- Scripts -->
+<script src="./js/translate.js"></script>
+<script>
         // Form submission handling
         const form = document.getElementById('contact-form');
         const successMessage = document.getElementById('success-message');
@@ -595,5 +645,5 @@
             });
         });
     </script>
-</body>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></body>
 </html>

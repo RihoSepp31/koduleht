@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,174 +10,535 @@
       gtag('config', 'G-CPDHGQBX4K');
     </script>
     
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Riho Sepa Maitsete nurk - kokaraamat ja retseptid">
+    <meta name="keywords" content="Riho Sepp, retseptid, kokandus, maitsete nurk, Eesti toit">
+    <meta name="author" content="Riho Sepp">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Maitsete nurk - Riho Sepp">
+    <meta property="og:description" content="Minu lemmikretseptid, köögikatsetused ja maitsvad hetked">
+    <meta property="og:image" content="../pildid/pilt1.jpg">
+    <meta property="og:url" content="https://rihosepp.com/maitsetenurk/kokandus.html">
+    <meta property="og:type" content="website">
+    
     <title>Maitsete nurk – Riho Sepp</title>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../css/kokandus.css">
+    
+    <!-- Google Translate override styles -->
+    <style>
+        /* Peida Google Translate bänner */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        
+        body {
+            top: 0px !important;
+        }
+        
+        .goog-te-gadget-icon {
+            display: none !important;
+        }
+        
+        /* Peida Google Translate tööriistade riba */
+        #goog-gt-tt {
+            display: none !important;
+        }
+        
+        .goog-te-balloon-frame {
+            display: none !important;
+        }
+        
+        /* Keelevaliku stiilid */
+        .lang-btn, .lang-btn-mobile {
+            background: transparent;
+            border: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .lang-btn:hover, .lang-btn-mobile:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active, .lang-btn-mobile.active {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .language-menu-mobile {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            #language-buttons {
+                display: none;
+            }
+            
+            .language-menu-mobile {
+                display: block;
+                width: 100%;
+                padding: 1rem 0;
+                border-top: 1px solid var(--border-glass);
+            }
+            
+            .mobile-lang-title {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+            
+            .mobile-lang-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+        }
+        
+        /* Peida tõlke indikaatorid */
+        .translated-ltr {
+            margin-top: 0 !important;
+        }
+        
+        .goog-te-banner {
+            display: none !important;
+        }
+        
+        /* Navigatsiooni parandus */
+        .navbar {
+            position: relative;
+            z-index: 1000;
+        }
+        
+        /* Täiendavad Google Translate peitmine */
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        body > .skiptranslate,
+        iframe.goog-te-banner-frame,
+        iframe.skiptranslate {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
+            line-height: 0 !important;
+            opacity: 0 !important;
+        }
+        
+        body {
+            top: 0 !important;
+            position: static !important;
+            margin-top: 0 !important;
+        }
+        
+        html {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        /* Eemaldame kõik võimalikud Google Translate elemendid */
+        .goog-te-combo,
+        .goog-te-gadget,
+        .goog-te-gadget-icon,
+        .goog-te-gadget-simple,
+        .goog-te-menu-frame,
+        .goog-te-menu2,
+        .goog-te-balloon-frame,
+        #goog-gt-tt,
+        .goog-tooltip,
+        .goog-tooltip:hover {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        
+        /* Fikseerime body ja html positsioonid */
+        body.translated-ltr,
+        body.translated-rtl,
+        html.translated-ltr,
+        html.translated-rtl {
+            top: 0 !important;
+            position: static !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RecipeWebsite",
+      "name": "Maitsete nurk",
+      "author": {
+        "@type": "Person",
+        "name": "Riho Sepp"
+      },
+      "description": "Riho Sepa kokaraamat ja retseptid",
+      "url": "https://rihosepp.com/maitsetenurk/kokandus.html"
+    }
+    </script>
 </head>
 <body class="dark-theme">
 
-    <nav class="navbar">
-        <div class="logo">Riho Sepp</div>
-        <ul class="nav-links">
-            <li><a href="../index.html">Avaleht</a></li>
-            <li><a href="../projektid.html">Projektid</a></li>
-            <li><a href="../minust/aboutme.html">Minust</a></li>
-            <li><a class="active" href="#">Maitsete nurk</a></li>
-            <li><a href="../meelelahutus/meelelahutus.html">Meelelahutus</a></li>
-            <li><a href="../meie.html">Meie lugu</a></li>
-            <li><a href="../raagi_kaasa.html">Räägi kaasa</a></li>
-            <li><a href="../kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-    <section class="hero-section">
-        <h1 class="welcome-heading">Tere tulemast!</h1>
-        <p class="intro-text">
-            Ma mäletan, et juba päris väiksena meeldis mulle mängida kokka... Minu kokandusteekonna algusest saab rohkem lugeda lehelt Minust.
-        </p>
-        <p class="intro-text">
-            Aga üks asi on kindel: olen alati toitu austanud. Pole midagi paremat kui teha süüa, katsetada uusi kooslusi, olla loov – ja näha, kuidas taldrik jääb lõpuks tühjaks. See on koka suurim tunnustus.
-        </p>
-        <p class="intro-text">
-            Minu jaoks ei ole kokkamine pelgalt kõhutäis. See on viis, kuidas ma end väljendan, räägin oma lugu ja pakun teistele killukese endast. Soovin, et minu toit ei oleks lihtsalt maitsev – vaid et seda armastataks.
-        </p>
-        <p class="intro-text">
-            Sellelt lehelt leiadki minu lemmikretseptid, köögikatsetused ja maitsvad hetked, mida tahan sinuga jagada. Ühendame maitsed, loovuse ja lihtsuse — ühte nurka. Maitsete nurka.
-        </p>
-    </section>
-
-    <section class="recipes">
-        <a href="./kodune_pasta_tomati_lihapalli_kastmes.html" class="recipe-card featured">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt1.jpg" alt="Kodune pasta" class="recipe-img">
-                <span class="recipe-category">Pearoad</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Kodune pasta tomati-lihapalli kastmes</h3>
-                <p>Rammus ja lohutav retsept, mis viib keele alla. Ideaalne pere õhtusöögiks.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">45 min</span>
-                    <span class="recipe-difficulty">Keskmine</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="Avokaado_voileib.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt3.jpg" alt="Avokaado võileib" class="recipe-img">
-                <span class="recipe-category">Hommikusöök</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Avokaado võileib pošeeritud munal</h3>
-                <p>Pehme muna, värske avokaado ja krõbe leib – lihtne, kuid geniaalne.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">15 min</span>
-                    <span class="recipe-difficulty">Lihtne</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./kana_karri.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt6.jpg" alt="Kana karri" class="recipe-img">
-                <span class="recipe-category">Pearoad</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Kana Karri</h3>
-                <p>Tugeva maitsega karri, mis paitab meeli ja täidab kõhtu. India köögist inspireeritud.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">35 min</span>
-                    <span class="recipe-difficulty">Keskmine</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./kana_taco.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt5.jpg" alt="Kana taco" class="recipe-img">
-                <span class="recipe-category">Kiire toit</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Kana Taco</h3>
-                <p>Kerged, särtsakad ja täis maitset – ideaalne jagamiseks sõpradega.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">25 min</span>
-                    <span class="recipe-difficulty">Lihtne</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./Kanawrapp.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt2.jpg" alt="Kana wrapp" class="recipe-img">
-                <span class="recipe-category">Kerged road</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Kana Wrapp</h3>
-                <p>Iga suutäis toob värskust ja tekstuuri – lihtne, aga sõltuvust tekitav.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">20 min</span>
-                    <span class="recipe-difficulty">Lihtne</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./omamoodi_pelmeenid.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt4.jpg" alt="Omamoodi pelmeenid" class="recipe-img">
-                <span class="recipe-category">Pearoad</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Omamoodi pelmeenid</h3>
-                <p>Ei ole päris vana kooli ega täiesti uus – just see, mida vajad, et üllatada.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">60 min</span>
-                    <span class="recipe-difficulty">Keeruline</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./laatsekreemsupp.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/laatsesupp.jpg" alt="Läätsesupp" class="recipe-img">
-                <span class="recipe-category">Supid</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Läätsesupp köögiviljade ja idudega</h3>
-                <p>Rikkalik taimne roog, mis ei tee järeleandmisi maitses.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">40 min</span>
-                    <span class="recipe-difficulty">Keskmine</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="./kupsisetort.html" class="recipe-card">
-            <div class="recipe-img-container">
-                <img src="../pildid/pilt7.jpg" alt="Küpsisetort" class="recipe-img">
-                <span class="recipe-category">Magustoidud</span>
-            </div>
-            <div class="recipe-content">
-                <h3>Küpsisetort</h3>
-                <p>Tort, mis ei vaja ahju ega keerulisi nippe – vaid armastust ja natuke aega.</p>
-                <div class="recipe-meta">
-                    <span class="recipe-time">30 min + jahutus</span>
-                    <span class="recipe-difficulty">Lihtne</span>
-                </div>
-            </div>
-        </a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Riho Sepp - Maitsete nurk</p>
-    </footer>
-
-    <!-- Google Translate element (peidetud) -->
+    <!-- Hidden Google Translate Element -->
     <div id="google_translate_element" style="display: none;"></div>
 
-    <!-- Skriptid -->
-    <script src="../translate.js"></script>
-  
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="sr-only">Liigu peamisele sisule</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Peamine navigatsioon">
+        <div class="nav-container">
+            <a class="logo" href="../index.html" aria-label="Avaleht"><span translate="no">Riho Sepp</span></a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" aria-label="Ava menüü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">Avaleht</a></li>
+                <li role="none"><a href="../projektid.html" role="menuitem">Projektid</a></li>
+                <li role="none"><a href="../minust/aboutme.html" role="menuitem">Minust</a></li>
+                <li role="none"><a href="#" class="active" role="menuitem">Maitsete nurk</a></li>
+                <li role="none"><a href="../meelelahutus/meelelahutus.html" role="menuitem">Meelelahutus</a></li>
+                <li role="none"><a href="../meie.html" role="menuitem">Meie lugu</a></li>
+                <li role="none"><a href="../raagi_kaasa.html" role="menuitem">Räägi kaasa</a></li>
+                <li role="none"><a href="../kontakt.html" role="menuitem">Kontakt</a></li>
+                
+                <!-- Desktop keelevalik -->
+                <li role="none" id="language-buttons" class="language-selector">
+                    <button onclick="translatePage('et')" class="lang-btn active" title="Eesti keel">🇪🇪 ET</button>
+                    <button onclick="translatePage('en')" class="lang-btn" title="English">🇬🇧 EN</button>
+                    <button onclick="translatePage('fi')" class="lang-btn" title="Suomi">🇫🇮 FI</button>
+                    <button onclick="translatePage('ru')" class="lang-btn" title="Русский">🇷🇺 RU</button>
+                </li>
+                
+                <!-- Mobiilne keelevalik -->
+                <li role="none" class="language-menu-mobile">
+                    <div class="mobile-lang-title">Vali keel / Choose language:</div>
+                    <div class="mobile-lang-buttons">
+                        <button onclick="translatePage('et')" class="lang-btn-mobile active">🇪🇪 Eesti</button>
+                        <button onclick="translatePage('en')" class="lang-btn-mobile">🇬🇧 English</button>
+                        <button onclick="translatePage('fi')" class="lang-btn-mobile">🇫🇮 Suomi</button>
+                        <button onclick="translatePage('ru')" class="lang-btn-mobile">🇷🇺 Русский</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-label="Tutvustus">
+            <h1 class="welcome-heading">Tere tulemast!</h1>
+            <p class="intro-text">
+                Ma mäletan, et juba päris väiksena meeldis mulle mängida kokka... Minu kokandusteekonna algusest saab rohkem lugeda lehelt Minust.
+            </p>
+            <p class="intro-text">
+                Aga üks asi on kindel: olen alati toitu austanud. Pole midagi paremat kui teha süüa, katsetada uusi kooslusi, olla loov – ja näha, kuidas taldrik jääb lõpuks tühjaks. See on koka suurim tunnustus.
+            </p>
+            <p class="intro-text">
+                Minu jaoks ei ole kokkamine pelgalt kõhutäis. See on viis, kuidas ma end väljendan, räägin oma lugu ja pakun teistele killukese endast. Soovin, et minu toit ei oleks lihtsalt maitsev – vaid et seda armastataks.
+            </p>
+            <p class="intro-text">
+                Sellelt lehelt leiadki minu lemmikretseptid, köögikatsetused ja maitsvad hetked, mida tahan sinuga jagada. Ühendame maitsed, loovuse ja lihtsuse — ühte nurka. Maitsete nurka.
+            </p>
+        </section>
+
+        <!-- Recipes Section -->
+        <section class="recipes" aria-label="Retseptid">
+            <a href="./kodune_pasta_tomati_lihapalli_kastmes.html" class="recipe-card featured">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt1.jpg" alt="Kodune pasta" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Pearoad</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Kodune pasta tomati-lihapalli kastmes</h3>
+                    <p>Rammus ja lohutav retsept, mis viib keele alla. Ideaalne pere õhtusöögiks.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">45 min</span>
+                        <span class="recipe-difficulty">Keskmine</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Avokaado_voileib.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt3.jpg" alt="Avokaado võileib" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Hommikusöök</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Avokaado võileib pošeeritud munal</h3>
+                    <p>Pehme muna, värske avokaado ja krõbe leib – lihtne, kuid geniaalne.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">15 min</span>
+                        <span class="recipe-difficulty">Lihtne</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./kana_karri.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt6.jpg" alt="Kana karri" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Pearoad</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Kana Karri</h3>
+                    <p>Tugeva maitsega karri, mis paitab meeli ja täidab kõhtu. India köögist inspireeritud.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">35 min</span>
+                        <span class="recipe-difficulty">Keskmine</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./kana_taco.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt5.jpg" alt="Kana taco" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Kiire toit</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Kana Taco</h3>
+                    <p>Kerged, särtsakad ja täis maitset – ideaalne jagamiseks sõpradega.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">25 min</span>
+                        <span class="recipe-difficulty">Lihtne</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./Kanawrapp.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt2.jpg" alt="Kana wrapp" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Kerged road</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Kana Wrapp</h3>
+                    <p>Iga suutäis toob värskust ja tekstuuri – lihtne, aga sõltuvust tekitav.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">20 min</span>
+                        <span class="recipe-difficulty">Lihtne</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./omamoodi_pelmeenid.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt4.jpg" alt="Omamoodi pelmeenid" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Pearoad</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Omamoodi pelmeenid</h3>
+                    <p>Ei ole päris vana kooli ega täiesti uus – just see, mida vajad, et üllatada.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">60 min</span>
+                        <span class="recipe-difficulty">Keeruline</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./laatsekreemsupp.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/laatsesupp.jpg" alt="Läätsesupp" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Supid</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Läätsesupp köögiviljade ja idudega</h3>
+                    <p>Rikkalik taimne roog, mis ei tee järeleandmisi maitses.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">40 min</span>
+                        <span class="recipe-difficulty">Keskmine</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./kupsisetort.html" class="recipe-card">
+                <div class="recipe-img-container">
+                    <img src="../pildid/pilt7.jpg" alt="Küpsisetort" class="recipe-img" loading="lazy">
+                    <span class="recipe-category">Magustoidud</span>
+                </div>
+                <div class="recipe-content">
+                    <h3>Küpsisetort</h3>
+                    <p>Tort, mis ei vaja ahju ega keerulisi nippe – vaid armastust ja natuke aega.</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time">30 min + jahutus</span>
+                        <span class="recipe-difficulty">Lihtne</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025 <span translate="no">Riho Sepp</span> - Maitsete nurk</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    
+    <!-- Google Translate Scripts -->
+    <script src="../js/translate.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Recipe Page JavaScript -->
+    <script>
+        // Eemalda Google Translate riba
+        function removeGoogleTranslateBar() {
+            // Otsi kõik Google Translate elemendid
+            const elements = document.querySelectorAll('.goog-te-banner-frame, .skiptranslate, iframe[name="google_translate_frame"]');
+            elements.forEach(el => {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+                el.style.height = '0';
+                el.style.width = '0';
+            });
+            
+            // Fikseeri body positsioon
+            document.body.style.top = '0';
+            document.body.style.position = 'static';
+            document.body.style.marginTop = '0';
+            
+            // Fikseeri html positsioon
+            document.documentElement.style.marginTop = '0';
+            document.documentElement.style.paddingTop = '0';
+        }
+        
+        // Käivita kohe
+        removeGoogleTranslateBar();
+        
+        // Käivita ka pärast lehte laadimist
+        window.addEventListener('load', removeGoogleTranslateBar);
+        
+        // Käivita iga 500ms esimese 5 sekundi jooksul
+        let attempts = 0;
+        const interval = setInterval(() => {
+            removeGoogleTranslateBar();
+            attempts++;
+            if (attempts > 10) clearInterval(interval);
+        }, 500);
+        
+        // Recipe page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🍳 Maitsete nurk laaditud!');
+            
+            // Initialize navigation
+            initializeNavigation();
+            
+            // Initialize recipe features
+            initializeRecipeFeatures();
+            
+            console.log('✅ Kokanduse komponendid valmis!');
+        });
+
+        // Navigation functionality
+        function initializeNavigation() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = navLinks.classList.contains('active');
+                    
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                    navToggle.setAttribute('aria-expanded', !isOpen);
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = isOpen ? '' : 'hidden';
+                });
+            }
+            
+            // Close menu on outside click
+            document.addEventListener('click', function(event) {
+                if (navLinks && navToggle) {
+                    const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+                    
+                    if (!isClickInside && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+            
+            // Close menu when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks && navToggle) {
+                        navLinks.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+        }
+
+        // Initialize recipe-specific features
+        function initializeRecipeFeatures() {
+            // Lazy loading for recipe images
+            const recipeImages = document.querySelectorAll('.recipe-img');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                recipeImages.forEach(img => imageObserver.observe(img));
+            }
+            
+            // Smooth scroll behavior for recipe cards
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            
+            recipeCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+        }
+
+        // Error handling
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            const loadTime = performance.now();
+            console.log(`⚡ Maitsete nurk laaditud ${Math.round(loadTime)}ms-ga`);
+        });
+    </script>
 </body>
 </html>

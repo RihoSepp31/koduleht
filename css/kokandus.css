@@ -584,3 +584,26 @@ body > .skiptranslate {
 body {
   top: 0 !important;
 }
+/* Google Translate overrides */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+    position: relative !important;
+}
+
+.skiptranslate {
+    display: none !important;
+}
+
+iframe.skiptranslate {
+    display: none !important;
+}
+
+/* Fix any layout issues */
+html {
+    margin-top: 0 !important;
+}

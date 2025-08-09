@@ -186,3 +186,4 @@ window.resetToEstonian = function() {
 // Ekspordi funktsioonid
 window.translatePage = translatePage;
 window.googleTranslateElementInit = googleTranslateElementInit;
+
