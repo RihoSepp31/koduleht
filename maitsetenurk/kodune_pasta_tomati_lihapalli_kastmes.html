@@ -13,11 +13,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kodune pasta">
-     <div id="language-buttons">
-  <button onclick="translatePage('et')" aria-label="Eesti"><img src="../lipud/ee.svg" alt="Eesti"></button>
-  <button onclick="translatePage('en')" aria-label="Inglise"><img src="../lipud/gb.svg" alt="Inglise"></button>
-  <button onclick="translatePage('ru')" aria-label="Vene"><img src="../lipud/ru.svg" alt="Vene"></button>
-  <button onclick="translatePage('fi')" aria-label="Soome"><img src="../lipud/fi.svg" alt="Soome"></button>
+ 
+           <!-- Keelevalik -->
+<div id="language-buttons" aria-label="Keelevalik">
+    <button class="lang-btn" onclick="translatePage('et')">Eesti</button>
+    <button class="lang-btn" onclick="translatePage('en')">English</button>
+    <button class="lang-btn" onclick="translatePage('ru')">Русский</button>
+    <button class="lang-btn" onclick="translatePage('fi')">Suomi</button>
 </div>
     
     <title>Kodune pasta tomati-lihapalli kastmes</title>
@@ -85,7 +87,7 @@
   <div id="google_translate_element" style="display: none;"></div>
 
   <!-- Skriptid -->
-  <script src="../translate.js"></script>
+  <script src="../js/translate.js"></script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

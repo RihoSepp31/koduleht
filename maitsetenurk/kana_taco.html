@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPDHGQBX4K');
+    </script>
 
-  gtag('config', 'G-CPDHGQBX4K');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proovi mahlaseid kana-tacosid Mehhiko stiilis! Kiire ja värske amps filmiõhtuks.">
-
-     <div id="language-buttons">
-  <button onclick="translatePage('et')" aria-label="Eesti"><img src="../lipud/ee.svg" alt="Eesti"></button>
-  <button onclick="translatePage('en')" aria-label="Inglise"><img src="../lipud/gb.svg" alt="Inglise"></button>
-  <button onclick="translatePage('ru')" aria-label="Vene"><img src="../lipud/ru.svg" alt="Vene"></button>
-  <button onclick="translatePage('fi')" aria-label="Soome"><img src="../lipud/fi.svg" alt="Soome"></button>
-</div>
-    <title>Kana Taco</title>
+    <meta name="description" content="Maitsev ja mahlane kana wrapp, lihtne valmistada ja ideaalne kiireks einestamiseks.">
+    <title>🌯 Kana Wrapp - Maitsete nurk</title>
     <link rel="stylesheet" href="retseptid_style.css">
 </head>
 <body>
-    <header>
-        <!--Printimise nupp-->
-        <button onclick="window.print()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">
-            🖨️ Prindi retsept
-        </button>
+    <!-- Tagasi nupp -->
+    <a href="kokandus.html" class="back-button">Tagasi retseptide juurde</a>
 
-        <h1>🌮 Kana Taco</h1>
+    <!-- Keelevalik -->
+    <div id="language-buttons" aria-label="Keelevalik">
+        <button class="lang-btn" onclick="translatePage('et')">Eesti</button>
+        <button class="lang-btn" onclick="translatePage('en')">English</button>
+        <button class="lang-btn" onclick="translatePage('ru')">Русский</button>
+        <button class="lang-btn" onclick="translatePage('fi')">Suomi</button>
+    </div>
+
+    <header>
+        <!-- Printimise nupp -->
+        <button onclick="window.print()">🖨️ Prindi retsept</button>
+
+        <h1>🌯 Kana Wrapp</h1>
         <p class="intro">
-            Mõnikord tekib lihtsalt igatsus Mehhiko toidu järele. Ja mis võiks olla parem kui üks kiire, värske ja vürtsikas amps?
-            Need tacod on ideaalne valik filmiõhtuks, nädalavahetuse snäkiks või kasvõi lõunaks – valmivad kiiresti, aga pakuvad palju maitset.
+            Minu armastus wrapide ja burritode vastu sai alguse Mehhiko toidust. 
+            Üks mu varasemaid töökogemusi köögis oli just Mehhiko stiilis tänavatoidu valmistamine – wrapid, tacod, quesadillad, churrod... 
+            See maailm oli täis maitseid, vürtse ja rõõmu.
+            <br><br>
+            See konkreetne kana-wrap pole küll otseselt Mehhiko päritolu, kuid iga amps viib mind korraks tagasi nende mälestuste juurde. 
+            Lihtne, mahlane, toitev – täpselt see, mida wrap peab olema.
+            <br><br>
+            Ja noh... et kodune toit ikka restoranilik välja näeks, panin serveerimisel taldrikule paar stiilset Sriracha-täppi. 
+            Sest silmadega söömine on ka osa elamusest. 😄🌯
         </p>
+
         <div class="image-container">
-            <img src="../pildid/pilt5.jpg" alt="Kana tacod" class="recipe-image">
+            <img src="../pildid/pilt2.jpg" alt="Kanawrapp" class="recipe-image">
         </div>
     </header>
 
     <section class="ingredients">
-        <h2>🍏 Vajaminevad koostisosad (3 tacot):</h2>
+        <h2>🛒 Vajaminevad koostisosad</h2>
         <ul>
-            <li>3 väikest tortillalehte</li>
-            <li>Grillkana (või eelnevalt praetud kanafilee)</li>
+            <li>Tortillad</li>
+            <li>Liha (kana, veis, siga või ainult köögiviljad)</li>
             <li>Tomat</li>
             <li>Kurk</li>
-            <li>Tšilli (viilutatud)</li>
-            <li>Roheline sibul</li>
-            <li>Värske koriander</li>
-            <li>Hapukoorekaste</li>
-            <li>Tšilli- või majoneesikaste</li>
+            <li>Salatilehed</li>
+            <li>Ürdid (koriander, petersell, till)</li>
+            <li>Kaste</li>
         </ul>
     </section>
 
     <section class="instructions">
-        <h2>👨‍🍳 Valmistamine (tehnoloogia):</h2>
+        <h2>👨‍🍳 Valmistamine</h2>
         <ol>
-            <li><strong>Valmista kana:</strong> Soojenda grillkana või prae fileed pannil, maitsesta oma maitse järgi.</li>
-            <li><strong>Haki köögiviljad:</strong> Lõika tomat, kurk, roheline sibul ja tšilli väikesteks tükkideks.</li>
-            <li><strong>Soojenda tortillad:</strong> Tee seda pannil, ahjus või mikrolaineahjus, kuni need on soojad ja painduvad.</li>
-            <li><strong>Kokku panek:</strong> Aseta igale tortillale salat, kana, köögiviljad, puista peale koriandrit ning nirista kastmeid.</li>
+            <li><strong>Liha:</strong> Prae meelepärane liha, maitsesta mõnusalt.</li>
+            <li><strong>Köögiviljad:</strong> Haki meelepärased köögiviljad.</li>
+            <li><strong>Serveeri:</strong> Pane tortilla laiali, lisa täidis ja kaste, seejärel keera rulli.</li>
         </ol>
     </section>
 
     <section class="tips">
-        <h2>💡 Nipp ja trikk:</h2>
+        <h2>💡 Nipid ja trikid</h2>
         <p>
-            Kui soovid eriti kiiret lahendust, kasuta poest ostetud grillkana ja valmis kastmeid. 
-            Rohkem särtsu saad laimimahla ja hakitud jalapeñoga.
+            Kui nüüd päris rääkida mehhiko stiilis burritodest, siis sealne teema on hoopis miskit muud. 
+            Kui sul on rohkem aega ja ei pelga elektriarvet, proovi teha aeglaselt küpsetatud liha (näiteks veisekael või rinnatükk) ahjus 100 kraadi juures terve öö. 
+            Tulemuseks on imemaitsev liha, millest saab valmistada ehtsaid mehhiko stiilis burritosid.
         </p>
     </section>
 
     <footer>
         <p>© 2025 Riho Sepp | Maitsete nurk</p>
-        <img src="../Pildid/Signature.jpg" alt="Signature">
-
+        <img src="../Pildid/Signature.jpg" alt="Riho Sepa allkiri">
     </footer>
-     <!-- Google Translate element (peidetud) -->
-  <div id="google_translate_element" style="display: none;"></div>
 
-  <!-- Skriptid -->
-  <script src="../translate.js"></script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Google Translate element (peidetud) -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Skriptid -->
+    <script src="../js/translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

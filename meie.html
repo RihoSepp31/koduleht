@@ -68,23 +68,24 @@
     <!-- Navigation -->
     <a href="index.html" class="back-button">⬅ Tagasi avalehele</a>
 
-    <!-- Keelevalik (desktop) -->
-    <ul id="language-buttons" class="language-selector">
-        <li><button onclick="translatePage('et')" class="lang-btn active" title="Eesti">🇪🇪 ET</button></li>
-        <li><button onclick="translatePage('en')" class="lang-btn" title="English">🇬🇧 EN</button></li>
-        <li><button onclick="translatePage('fi')" class="lang-btn" title="Suomi">🇫🇮 FI</button></li>
-        <li><button onclick="translatePage('ru')" class="lang-btn" title="Русский">🇷🇺 RU</button></li>
-    </ul>
+                   <!-- Keelevalik -->
+<div id="language-buttons" aria-label="Keelevalik">
+    <button class="lang-btn" onclick="translatePage('et')">Eesti</button>
+    <button class="lang-btn" onclick="translatePage('en')">English</button>
+    <button class="lang-btn" onclick="translatePage('ru')">Русский</button>
+    <button class="lang-btn" onclick="translatePage('fi')">Suomi</button>
+</div>
 
     <!-- Keelevalik (mobiil) -->
     <div class="language-menu-mobile">
         <div class="mobile-lang-title">Vali keel / Choose language:</div>
-        <div class="mobile-lang-buttons">
-            <button onclick="translatePage('et')" class="lang-btn-mobile active">🇪🇪 Eesti</button>
-            <button onclick="translatePage('en')" class="lang-btn-mobile">🇬🇧 English</button>
-            <button onclick="translatePage('fi')" class="lang-btn-mobile">🇫🇮 Suomi</button>
-            <button onclick="translatePage('ru')" class="lang-btn-mobile">🇷🇺 Русский</button>
-        </div>
+                     <!-- Keelevalik -->
+<div id="language-buttons" aria-label="Keelevalik">
+    <button class="lang-btn" onclick="translatePage('et')">Eesti</button>
+    <button class="lang-btn" onclick="translatePage('en')">English</button>
+    <button class="lang-btn" onclick="translatePage('ru')">Русский</button>
+    <button class="lang-btn" onclick="translatePage('fi')">Suomi</button>
+</div>
     </div>
 
     <header>

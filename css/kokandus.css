@@ -607,3 +607,276 @@ iframe.skiptranslate {
 html {
     margin-top: 0 !important;
 }
+
+/* --- NAV TWEAKS: parem loetavus + klikkpiirkond + aktiivne "pill" --- */
+
+/* kompaktsem klaas + parem kontrast */
+.navbar {
+  gap: 2rem;
+  padding: 12px 18px;
+  border-radius: 28px;
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(20,20,20,0.55);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+/* peen valgusriba baari all */
+.navbar::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(1200px 60px at 50% 120%, rgba(255,215,61,0.12), transparent 60%);
+  z-index: -1;
+}
+
+/* suurem klikkpiirkond ja rahulikum hover */
+.nav-links li a {
+  padding: 10px 18px;                 /* hit-area */
+  border-radius: 22px;
+  color: var(--text-secondary);
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
+  backdrop-filter: saturate(120%);
+}
+
+.nav-links li a:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  transform: translateY(-1px);
+}
+
+/* selge aktiivne "pill" + sisemine kuma (parem nähtavus tumedal taustal) */
+.nav-links li a.active {
+  color: #fff;
+  background:
+    radial-gradient(120% 140% at 20% 20%, rgba(255,107,107,.18), transparent 70%),
+    radial-gradient(120% 140% at 80% 80%, rgba(255,217,61,.16), transparent 70%),
+    rgba(255,255,255,0.10);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14) inset,
+    0 6px 22px rgba(0,0,0,0.35),
+    0 0 24px rgba(255,215,61,0.18);
+  transform: translateY(-1px);
+}
+
+/* klaviatuuri kasutajatele */
+.nav-links a:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(0,0,0,0.9),
+    0 0 0 4px rgba(0,255,136,0.55);
+}
+
+/* kui ekraan on kitsam: parem mahtumine + rullitav menüü, mitte katki */
+@media (max-width: 1024px) {
+  .navbar { gap: 1rem; padding: 10px 14px; }
+  .nav-links {
+    gap: .5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li a { padding: 9px 14px; }
+}
+/* Skip link ainult fookuses nähtav */
+.sr-only {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+}
+
+.sr-only:focus,
+.sr-only:active {
+  left: 16px !important;
+  top: 16px !important;
+  width: auto !important;
+  height: auto !important;
+  clip: auto !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  background: rgba(20,20,20,.85) !important;
+  border: 1px solid rgba(255,255,255,.15) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 22px rgba(0,0,0,.35) !important;
+  z-index: 2000 !important;
+}
+/* Nav – sama vibe nagu avalehel */
+.navbar {
+  gap: 2rem;
+  padding: 12px 18px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(20,20,20,0.55);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+/* linkide klikkpiirkond + pehmem hover */
+.nav-links li a {
+  padding: 10px 18px;
+  border-radius: 22px;
+  color: var(--text-secondary);
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  transform: translateY(-1px);
+}
+
+/* aktiivne kapsel – gradient + sisemine kuma */
+.nav-links li a.active {
+  color: #fff;
+  background:
+    radial-gradient(120% 140% at 20% 20%, rgba(255,107,107,.18), transparent 70%),
+    radial-gradient(120% 140% at 80% 80%, rgba(255,217,61,.16), transparent 70%),
+    rgba(255,255,255,0.10);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14) inset,
+    0 6px 22px rgba(0,0,0,0.35),
+    0 0 24px rgba(255,215,61,0.18);
+  transform: translateY(-1px);
+}
+
+/* klaviatuuri fookus nähtav */
+.nav-links a:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(0,0,0,0.9),
+    0 0 0 4px rgba(0,255,136,0.55);
+}
+
+/* kitsamatel ekraanidel – rullitav, mitte katki */
+@media (max-width: 1024px) {
+  .navbar { gap: 1rem; padding: 10px 14px; }
+  .nav-links {
+    gap: .5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li a { padding: 9px 14px; }
+}
+/* 1) Ära liiguta linki hoveril – stabiilne hit-area */
+.nav-links li a {
+  display: block;
+  padding: 10px 18px;
+  border-radius: 22px;
+  will-change: background, color;
+  transform: none;                 /* kindluse mõttes */
+}
+.nav-links li a:hover {
+  transform: none;                 /* eemaldame varem lisatud translateY */
+}
+
+/* 2) Ära tee nav-rida rullitavaks laial ekraanil (rullub vaid kitsal) */
+@media (min-width: 1024px) {
+  .nav-links {
+    overflow: visible !important;
+  }
+}
+
+/* 3) Natuke rohkem vahet, et kuma ei „sööks“ naabrit */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;                     /* stabiilne vahe */
+}
+
+/* 4) Kindel fookus/hover – ilma vertikaalse nihketa */
+.nav-links li a:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+}
+
+/* 5) Aktiivne kapsel – sama välimus, aga ilma liikumiseta */
+.nav-links li a.active {
+  color: #fff;
+  background:
+    radial-gradient(120% 140% at 20% 20%, rgba(255,107,107,.18), transparent 70%),
+    radial-gradient(120% 140% at 80% 80%, rgba(255,217,61,.16), transparent 70%),
+    rgba(255,255,255,0.10);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.14) inset,
+    0 6px 22px rgba(0,0,0,0.35),
+    0 0 24px rgba(255,215,61,0.18);
+}
+/* --- Language buttons: text-only pill style --- */
+#language-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 8px;
+  border-radius: 18px;
+  border: 1px solid var(--border-glass);
+  z-index: 100;
+}
+
+#language-buttons .lang-btn {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  height: 38px;
+  line-height: 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+#language-buttons .lang-btn:hover {
+  background: rgba(255,255,255,0.10);
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.3);
+}
+
+#language-buttons .lang-btn:active {
+  transform: translateY(0);
+}
+
+/* Kui aktiivne (translate.js lisab .active), muudame teksti tumedamaks parema kontrasti jaoks */
+#language-buttons .lang-btn.active {
+  color: #1a1a1a;       /* kontrast kuldse taustaga */
+  font-weight: 700;
+}
+
+/* Väiksematel ekraanidel – lubame horisontaalse kerimise ja tihendame vahet */
+@media (max-width: 768px) {
+  #language-buttons {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: 12px;
+    gap: 6px;
+    padding: 6px;
+    overflow-x: auto;
+    max-width: calc(100vw - 24px);
+  }
+  #language-buttons .lang-btn {
+    padding: 7px 12px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+}
+

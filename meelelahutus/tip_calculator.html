@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDHGQBX4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CPDHGQBX4K');
+  </script>
 
-  gtag('config', 'G-CPDHGQBX4K');
-</script>
   <meta charset="UTF-8">
   <title>Tip Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       background-color: #111;
@@ -21,6 +23,8 @@
       flex-direction: column;
       align-items: center;
       padding: 2rem;
+      min-height: 100vh;
+      margin: 0;
     }
     .card {
       background-color: #1a1a1a;
@@ -48,9 +52,58 @@
       margin-top: 1.5rem;
       font-size: 1.2rem;
     }
+
+    /* --- Keelevalik (tekstinupud) --- */
+    #language-buttons {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 6px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.4);
+      z-index: 100;
+    }
+    #language-buttons .lang-btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.7);
+      color: #111;
+      padding: 6px 12px;
+      height: 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease, transform .12s ease;
+      white-space: nowrap;
+    }
+    #language-buttons .lang-btn:hover {
+      background: rgba(255,255,255,0.9);
+      transform: translateY(-1px);
+    }
+    /* Aktiivne keel – translate.js lisab .active */
+    #language-buttons .lang-btn.active {
+      background: linear-gradient(135deg, #ffd400, #ffea7a) !important;
+      color: #111 !important;
+      border-color: #ffd400 !important;
+      box-shadow: 0 0 0 2px rgba(255,212,0,0.25), 0 6px 18px rgba(255,212,0,0.35) !important;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Keelevalik -->
+  <div id="language-buttons" aria-label="Keelevalik">
+    <button class="lang-btn" onclick="translatePage('et')">Eesti</button>
+    <button class="lang-btn" onclick="translatePage('en')">English</button>
+    <button class="lang-btn" onclick="translatePage('ru')">Русский</button>
+    <button class="lang-btn" onclick="translatePage('fi')">Suomi</button>
+  </div>
+
   <div class="card">
     <h2>🧮 Tip Calculator</h2>
     <input type="number" id="bill" placeholder="Arve kogusumma €">
@@ -77,5 +130,12 @@
       }
     }
   </script>
+
+  <!-- Google Translate element (peidetud) -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- Skriptid: esmalt sinu translate.js, siis Google'i element -->
+  <script src="../js/translate.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
